@@ -221,6 +221,40 @@ small {
   z-index:10;
   }
 
+.icon2 {
+  background:transparent url(img/sprites7.png) no-repeat 0 0;
+  display:block;
+  width:20px;
+  height:20px;
+  text-indent:-999em;
+  }
+  .slide-control .icon2 {
+    width:80px;
+    height:60px;
+    position:absolute;
+    top:50%;
+    margin-top:-30px;
+    }
+    .icon2.toggle {
+      width:40px;
+      height:40px;
+      background-position:-440px 0;
+      }
+    .icon2.next {
+      right:0;
+      background-position:0 -90px;
+      }
+    .icon2.prev {
+      left:0;
+      background-position:-85px -90px;
+      }
+
+.icon2.esrilogo {width:86px; height:109px; background-position: -604px -2px}
+.icon2.hiu_logo {width:150px; height:52px; background-position: -692px -2px}
+.icon2.secondary_cities_logo3 {width:256px; height:150px; background-position: -2px -2px}
+.icon2.unsaac_logo {width:342px; height:128px; background-position: -260px -2px}
+.icon2.usdos-logo-seal {width:86px; height:86px; background-position: -692px -56px}
+
 .icon {
   background:transparent url(img/sprite.png) no-repeat 0 0;
   display:block;
@@ -318,6 +352,10 @@ small {
 
 .dark {
   background:#101010;
+  padding:40px 0;
+  }
+.light {
+  background: #FFFFFF;
   padding:40px 0;
   }
 .prose {
@@ -541,10 +579,10 @@ content: none;
     background:#eee;
     }
   .section.dark {
-    background:#101010 url(img/dot-matrix.png) repeat 0 0;
+    background: #F6F6F6 url(img/dot-matrix.png) repeat 0 0;
     }
     .section.dark .title {
-      color:#fff;
+      color:#000000;
       }
   #tagline {
 	  font-size:28px;
@@ -807,6 +845,10 @@ content: none;
     margin:0 0 20px;
     }
     .footer .partners .icon {
+      display:inline-block;
+      margin:0 5px;
+      }
+        .footer .partners .icon2 {
       display:inline-block;
       margin:0 5px;
       }

@@ -3,52 +3,99 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 {% include dochead.html %}
+
 </head>
-<body class='interactive'>
-<div class='interactive-heading'>
-  <div class='globals'>
-    <div class='limiter'>
-      <a href='#' class='close'>&times;</a>
-      <a href='#' id='toggle' class='icon toggle'>Toggle Nav</a>
-      <div class='nav clearfix'>
-        <a href='{{site.baseurl}}/cities' {% if page.url == "/cities" %}class='active'{% endif %}>All Cities</a>
-        <a href='{{site.baseurl}}/about' {% if page.url == "/about" %}class='active'{% endif %}>About</a>
+
+<body>
+<div class='interactive'>
+  <div class='interactive-heading'>
+    <div class='globals'>
+
+      <div class='limiter'>
+        <a href='#' class='close'>&times;</a>
+        <a href='#' id='toggle' class='icon toggle'>Toggle Nav</a>
+        <div class='nav clearfix'>
+          <!--<a href='{{site.baseurl}}/cities' {% if page.url == "/cities" %}class='active'{% endif %}>All Cities</a>-->
+          <a href='{{site.baseurl}}/about' {% if page.url == "/about" %}class='active'{% endif %}>About</a>
+        </div>
+        <a href='{{site.baseurl}}/' class='title icon logo'>Open Cities</a><a href='{{site.baseurl}}/cities/{{page.city}}'>in {{page.city | capitalize}}</a>
       </div>
-      <a href='{{site.baseurl}}/' class='title icon logo'>Open Cities</a><a href='{{site.baseurl}}/cities/{{page.city}}'>in {{page.city | capitalize}}</a>
+
     </div>
   </div>
+</div>l
 
-  <div class='limiter'>
-    <div class='title-block'>
-      <h2>
-        {{page.title}}
-        {% if page.subtitle %}
-          <span class='subtitle'>{{page.subtitle}}</span>
-        {% endif %}
-      </h2>
-      <div class='prose'>{{content}}</div>
-      {% if page.overpass_link %}
-      <div class='download_container'>
+  <div class='limiter2'>
+
+
+      <div class='title-block2'>
+        
+          <h2>
+            {{page.title}}
+            {% if page.subtitle %}
+              <span class='subtitle'>{{page.subtitle}}</span>
+            {% endif %}
+          </h2>
+<div class='title-block-text'>
+          <div class='prose'>{{content}}</div>
+
+          <div class='map-containment2'>
+            <div id='map' class='map2'></div>
+          </div>
+
+        </div>
+      </div>
+
+
+  </div>
+
+<!--
         <div class='download_button'>
           <span class='button toggle'>Download the data</span>
         </div>
-        <div class='download_menu'>
-          <a href="{{site.baseurl}}/data/{{ page.title | url_encode }}.zip"><h2>Get the shapefile generated on {{page.shapefile_date}}</h2></a>
-          </br>
-          <a href='{{page.overpass_link}}' class='overpass_link'><h2>Generate a new OpenStreetMap extract dynamically</h2> </a>
-        </div>
-      </div>
-      <div class="modal" id="loading">
-          <div class="wait-info"><h2> Generating a new extract from OpenStreetMap...</h2></div>
-      </div>
-      {% endif %}
+
+
+<div class='map-containment2'>
+  <div id='map' class='map'></div>
+</div>
+-->
+
+<div class='limiter2'>
+
+<!--http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_menu_list-inline&stacked=h-->
+<div class="container">
+  <h2>Dynamic Tabs</h2>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+    <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>HOME</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
   </div>
 </div>
 
-<div class='map-containment'>
-  <div id='map' class='map'></div>
+
 </div>
+
 </body>
 </html>

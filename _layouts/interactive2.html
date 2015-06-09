@@ -1,0 +1,103 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+
+{% include dochead.html %}
+
+</head>
+
+<body>
+<div class='interactive'>
+  <div class='interactive-heading'>
+    <div class='globals'>
+
+      <div class='limiter'>
+        <a href='#' class='close'>&times;</a>
+        <a href='#' id='toggle' class='icon toggle'>Toggle Nav</a>
+        <div class='nav clearfix'>
+          <!--<a href='{{site.baseurl}}/cities' {% if page.url == "/cities" %}class='active'{% endif %}>All Cities</a>-->
+          <a href='{{site.baseurl}}/about' {% if page.url == "/about" %}class='active'{% endif %}>About</a>
+        </div>
+        <!--the logo for the banner-->
+        <a href='{{site.baseurl}}/' class='icon3 SecondaryCitiesLogo_white_banner'>Open Cities</a><a href='{{site.baseurl}}/cities/{{page.city}}'>in {{page.city | capitalize}}</a>
+        <!--<a href='{{site.baseurl}}/'><img src='{{site.baseurl}}/img/SecondaryCitiesLogo_white.png' width='150px'></a>-->
+      </div>
+
+    </div>
+  </div>
+</div>l
+
+  <div class='limiter2'>
+      <div class='title-block2'>
+        
+          <h2>
+            {{page.title}}
+            {% if page.subtitle %}
+              <span class='subtitle'>{{page.subtitle}}</span>
+            {% endif %}
+          </h2>
+          <div class='title-block-text'>
+            <div class='prose'>{{content}}</div>
+          </div>
+
+      </div>
+    </div>
+
+
+ <div class:'static_map'>
+  <img src='http://api.tiles.mapbox.com/v4/mapbox.streets/-71.96,-13.53,11/500x300.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ'>
+ </div>
+
+
+  
+
+<!--
+        <div class='download_button'>
+          <span class='button toggle'>Download the data</span>
+        </div>
+
+
+<div class='map-containment2'>
+  <div id='map' class='map'></div>
+</div>
+-->
+
+<div class='limiter2'>
+
+<!--http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_menu_list-inline&stacked=h-->
+<div class="container">
+  <h2>Workshop Instructions</h2>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Day 1</a></li>
+    <li><a data-toggle="tab" href="#menu1">Day 2</a></li>
+    <li><a data-toggle="tab" href="#menu2">Day 3</a></li>
+    <li><a data-toggle="tab" href="#menu3">Day 4</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>Day 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Day 2</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Day 3</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Day 4</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+</body>
+</html>

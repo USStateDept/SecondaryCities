@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include dochead.html %}
+</head>
+<body>
+
+    {% if page.no-header %}
+    <div id='header' class='header no-header'></div>
+    {% elsif page.preview %}
+    <div id='header' class='header' style='background-image:url("{{site.baseurl}}/img/banners/{{page.preview}}");'>
+      <div class='dot-matrix'></div>
+      {% include about_header.html %}
+      <div class='limiter'>
+        <div class='title-block'>
+          <h2>{{page.title}}</h2>
+            {% if page.subtitle %}
+            <div class='subtitle'>{{page.subtitle}}</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% elsif page.slideshow %}
+    <div id='header' class='header slideshow'>
+      <a href='#' id='toggle' class='icon toggle'>Toggle Nav</a>
+      <a href='#prev' class='slide-control prev'>
+        <span href='#previous' class='icon prev'>Previous</span>
+      </a>
+      <a href='#next' class='slide-control next'>
+        <span href='#next' class='icon next'>Next</span>
+      </a>
+      {% for item in page.slideshow %}
+      <div class='slide {% if item.nocover %}no-cover {% endif %} {% if forloop.first %}active {% endif %} slide-{{forloop.index}}' data-index='slide-{{forloop.index}}' style='background-image:url("{{site.baseurl}}/img/banners/{{item.slide}}");'>
+        <div class='dot-matrix'></div>
+        {% include header.html %}
+        <div class='limiter'>
+          <div class='title-block'>
+            <h2>{{item.title}}</h2>
+            <p class='subtitle'>{{item.subtitle}}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      <script>
+        $(function() {
+          gfdrr.slideShow($('.header'));
+        });
+      </script>
+    </div>
+
+    {% elsif page.citiesMap %}
+    <div id='header' class='map header'>
+      {% include header.html %}
+
+      <div class='limiter'>
+        <div class='title-block'>
+          {% for item in site.categories.cities %}
+            {% assign cities = forloop.length %}
+          {% endfor %}
+
+          {% for item in site.categories.casestudy %}
+            {% assign casestudy = forloop.length %}
+          {% endfor %}
+
+          <h2>{{cities}} Cities, {{casestudy}} Case Studies</h2>
+          <p class='subtitle'>Explore current operations at the local level</p>
+        </div>
+      </div>
+
+      <script>
+        var header = document.getElementById('header');
+        $(function() {
+          gfdrr.citiesMap(header, '{{page.citiesMap}}');
+        });
+      </script>
+    </div>
+    {% endif %}
+
+  {{content}}
+
+  {% include footer.html %}
+</body>
+</html>

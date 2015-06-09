@@ -209,11 +209,12 @@ small {
   margin-top:20px;
   }
 .title-block2 {
-  margin-top:50px;
+  margin-top:70px;
   }
 .title-block-text {
-  width:50%;
-  display: inline-flex;
+  width:40%;
+  float:left;
+  margin-right: 30px;
   }
 .subtitle {
   font-size:22px;
@@ -235,8 +236,29 @@ small {
   z-index:10;
   }
 
+.icon3 {
+  background:transparent url(img/secondary_cities_logos.png) no-repeat 0 0;
+  display:block;
+  width:20px;
+  height:20px;
+  text-indent:-999em;
+  }
+  .slide-control .icon3 {
+    width:80px;
+    height:60px;
+    position:absolute;
+    top:50%;
+    margin-top:-30px;
+    }
+
+.icon3.SecondaryCitiesLogo_white_banner {
+            background-position: -3688px -1056px;
+            width: 250px;
+            height: 69px;
+        }
+
 .icon2 {
-  background:transparent url(img/sprites7.png) no-repeat 0 0;
+  background:transparent url(img/footer_logos.png) no-repeat 0 0;
   display:block;
   width:20px;
   height:20px;
@@ -263,11 +285,33 @@ small {
       background-position:-85px -90px;
       }
 
-.icon2.esrilogo {width:86px; height:109px; background-position: -604px -2px}
-.icon2.hiu_logo {width:150px; height:52px; background-position: -692px -2px}
-.icon2.secondary_cities_logo3 {width:256px; height:150px; background-position: -2px -2px}
-.icon2.unsaac_logo {width:342px; height:128px; background-position: -260px -2px}
-.icon2.usdos-logo-seal {width:86px; height:86px; background-position: -692px -56px}
+.icon2.hiu_logo {
+            background-position: 0 0;
+            width: 150px;
+            height: 52px;
+            vertical-align:middle
+        }
+        
+        .icon2.unsaac_logo {
+            background-position: 0 -52px;
+            width: 86px;
+            height: 116px;
+            vertical-align:middle
+        }
+        
+        .icon2.esrilogo {
+            background-position: -150px 0;
+            width: 80px;
+            height: 101px;
+            vertical-align:middle
+        }
+        
+        .icon2.usdos-logo-seal {
+            background-position: -230px 0;
+            width: 86px;
+            height: 86px;
+            vertical-align:middle
+        }
 
 .icon {
   background:transparent url(img/sprite.png) no-repeat 0 0;
@@ -462,12 +506,17 @@ small {
     .header .limiter {
       position:relative;
       }
+    /*http://stackoverflow.com/questions/806000/how-to-give-text-or-an-image-a-transparent-background-using-css*/
     .header .title-block {
       float:left;
       position:relative;
       margin-top:5px;
-      width:40%;
+      margin-left:40px;
+      width:70%;
       z-index:100;
+      background-color:rgba(0,0,0,0.5);
+      padding: 10px;
+      border-radius: 25px;
       }
     .header a {
       color:#fff;
@@ -515,10 +564,14 @@ small {
   z-index:2000;
   font-size: 120%;
   }
+.above {
+  z-index:2000;
+}
   .interactive-heading .nav a,
   .header .nav a {
     float:left;
     display:block;
+    text-decoration: none;
     font-family:Opensans,'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight:bold;
     margin-left:10px;
@@ -532,10 +585,12 @@ small {
   padding:40px 0;
   }
 
+
 .nav a:before {
 content: " | ";
 color: #fff;
 }
+
 
 .nav a:first-child:before {
 content: none;
@@ -550,7 +605,7 @@ content: none;
   height:100%;
   position:absolute;
   top:0;left:0;
-  z-index:1;
+  z-index:-1;
   }
 .overlay {
   background:url(img/overlay.png) repeat 0 0;
@@ -1037,7 +1092,7 @@ content: none;
     top:5px;
     }
   .interactive-heading .globals {
-    background:#202020 url(img/banners/interactives.png) no-repeat 0 0;
+    background:#202020 url(img/banners/frontpage-cusco4.png) no-repeat 0 0;
     margin-bottom:20px;
     padding:8px 0;
     background-size:cover;
@@ -1089,7 +1144,7 @@ content: none;
   }
 
   .interactive-heading .download_menu a:hover > h2 {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   .download_container:hover div:hover + .download_menu, .download_menu:hover {
@@ -1131,6 +1186,10 @@ content: none;
   width:30%;
   height:35%;
   }
+.static_map {
+  width:40%;
+  float:right;
+}
 .attribution {
   background:#202020;
   color:#fff;
@@ -1245,8 +1304,12 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
 .slide-control {
   height:80px;
   }
-.nav {
-  display:none;
+.nav2 {
+  position:absolute;
+  }
+.div .textabove {
+  display:absolute;
+  z-index:2000;
   }
 .active-nav .nav {
   display:block;

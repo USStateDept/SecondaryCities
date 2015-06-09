@@ -1,0 +1,53 @@
+/* glue: 0.11.1 hash: 6c55a63adf */
+        .sprite-secondary_cities_logos-SecondaryCitiesLogo_white,
+.sprite-secondary_cities_logos-SecondaryCitiesLogo_blue,
+.sprite-secondary_cities_logos-SecondaryCitiesLogo_black,
+.sprite-secondary_cities_logos-SecondaryCitiesLogo_white_banner,
+.sprite-secondary_cities_logos-SecondaryCitiesLogo_white_banner_small {
+            background-image: url('secondary_cities_logos.png');
+            background-repeat: no-repeat;
+        }
+        
+        .sprite-secondary_cities_logos-SecondaryCitiesLogo_white {
+            background-position: 0 0;
+            width: 2061px;
+            height: 1056px;
+        }
+        
+        .sprite-secondary_cities_logos-SecondaryCitiesLogo_blue {
+            background-position: -2061px 0;
+            width: 2061px;
+            height: 1056px;
+        }
+        
+        .sprite-secondary_cities_logos-SecondaryCitiesLogo_black {
+            background-position: 0 -1056px;
+            width: 2061px;
+            height: 1056px;
+        }
+        
+        .sprite-secondary_cities_logos-SecondaryCitiesLogo_white_banner {
+            background-position: -2061px -1056px;
+            width: 1627px;
+            height: 450px;
+        }
+        
+        .sprite-secondary_cities_logos-SecondaryCitiesLogo_white_banner_small {
+            background-position: -3688px -1056px;
+            width: 250px;
+            height: 69px;
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (-o-min-device-pixel-ratio: 100/100), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {
+            .sprite-secondary_cities_logos-SecondaryCitiesLogo_white,
+    .sprite-secondary_cities_logos-SecondaryCitiesLogo_blue,
+    .sprite-secondary_cities_logos-SecondaryCitiesLogo_black,
+    .sprite-secondary_cities_logos-SecondaryCitiesLogo_white_banner,
+    .sprite-secondary_cities_logos-SecondaryCitiesLogo_white_banner_small {
+                background-image: url('secondary_cities_logos.png');
+                -webkit-background-size: 4122px 2112px;
+                -moz-background-size: 4122px 2112px;
+                background-size: 4122px 2112px;
+            }
+        }
+        

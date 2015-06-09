@@ -1,12 +1,12 @@
 <div class='globals'>
   <div class='limiter'>
     {% unless page.slideshow %}
-      <a href='#' id='SecondaryCitiesLogo_white_banner' class='icon3 SecondaryCitiesLogo_white_banner'>Toggle Nav</a>
+      <!--<a href='#' id='SecondaryCitiesLogo_white_banner' class='icon3 SecondaryCitiesLogo_white_banner'>Toggle Nav</a>-->
     {% endunless %}
     <div class='nav clearfix'>
-      <a href='{{site.baseurl}}/about'{% if page.url == "/about" %}{% endif %}>About</a>
-      <a href='{{site.baseurl}}/cities'{% if page.url == "/cities" %}{% endif %}>Español</a>
-      <!--
+      <a href='{{site.baseurl}}/about' {% if page.url == "/about" %}{% endif %}>About</a>
+<!--
+      <a href='{{site.baseurl}}/cities' {% if page.url == "/cities" %}class='active'{% endif %}>Cities</a>
       <a href='{{site.baseurl}}/guide' {% if page.url == "/guide" %}class='active'{% endif %}>Guide</a>
 -->
     </div>

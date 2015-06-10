@@ -510,7 +510,7 @@ small {
     .header .title-block {
       float:left;
       position:relative;
-      margin-top:5px;
+      margin-top:-5px;
       margin-left:40px;
       width:70%;
       z-index:100;

@@ -1,6 +1,7 @@
 ---
 published: true
 layout: default
+title: home
 slideshow: 
   - slide: "frontpage-cusco.png"
     title: Urban and Open
@@ -13,33 +14,46 @@ slideshow:
     subtitle: "Adding society-critical datasets to the the free, citizen-powered <a href=\"//openstreetmap.org/?lat=19.5&lon=88&zoom=5&layers=M\">OpenStreetMap</a>, with global coverage and street level detail"
 ---
 
+{% assign posts=site.posts | where:"title", page.title | sort: 'path' %}
+<ul>
+{% for post in posts %}
+    <li class="lang">
+        <a href="{{site.baseurl}}{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
+    </li>
+{% endfor %}
+</ul>
+
+
+
 <div class='section dark'>
   <div class='limiter'>
     <div id='tagline' class='centered'>
-      <p>Secondary Cities is a growing partnership that aims to catalyze the creation, management and use of open data to produce innovative solutions for urban planning and resilience challenges across South Asia.</p>
+      <p>Spanish Secondary Cities is a growing partnership that aims to catalyze the creation, management and use of open data to produce innovative solutions for urban planning and resilience challenges across South Asia.</p>
       </div>
     <h4 class='title centered'>Select Case Studies<br /> <span class='subtitle'>Discover innovative uses of open data to empower resilient communities</span></h4>
     <ul class='activities grid clearfix'>
       {% for case in site.categories.casestudy%}
-        {% for tag in case.tags %}
-          {% if tag == 'splash' %}
-            <li>
-              <a href='{{site.baseurl}}{{case.url}}' style='background-image:url("http://api.tiles.mapbox.com/v3/{{case.map}}/{{case.center[0].lon}},{{case.center[0].lat}},{{case.center[0].zoom}}/640x300.png");'>
-                <div class='overlay'></div>
-                <div class='label'>
-                  {% for name in site.categories.cities %}
-                    {% if name.city == case.city %}
-                      {{name.title}}
-                    {% endif %}
-                  {% endfor %}
-                </div>
-                <h4 class='case-title'>{{case.title}}</h4>
-                <p class='city-desc'>{{case.subtitle | truncate:120}}</p>
-                <span class='more'>More</span>
-              </a>
-            </li>
-          {% endif %}
-        {% endfor %}
+        {% if page.lang == case.lang %}
+          {% for tag in case.tags %}
+            {% if tag == 'splash' %}
+              <li>
+                <a href='{{site.baseurl}}{{case.url}}' style='background-image:url("http://api.tiles.mapbox.com/v3/{{case.map}}/{{case.center[0].lon}},{{case.center[0].lat}},{{case.center[0].zoom}}/640x300.png");'>
+                  <div class='overlay'></div>
+                  <div class='label'>
+                    {% for name in site.categories.cities %}
+                      {% if name.city == case.city %}
+                        {{name.title}}
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                  <h4 class='case-title'>{{case.title}}</h4>
+                  <p class='city-desc'>{{case.subtitle | truncate:120}}</p>
+                  <span class='more'>More</span>
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
       {% endfor %}
     </ul>
 

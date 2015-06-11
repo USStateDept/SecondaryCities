@@ -1,0 +1,33 @@
+---
+layout: interactive
+category: casestudy
+city: 'dhaka'
+title: 'Building Labels and Roads'
+subtitle: 'Increasing the infrastructure data in Dhaka'
+preview: 'dhaka.png'
+map: 'gfdrr.map-zyekuz6n'
+center:
+  - lat: 23.7910
+    lon: 90.3583
+    zoom: 15
+tags:
+- dhaka
+---
+
+OpenStreetMap's road data coverage for Dhaka does not include many smaller roads and recently updated roads. With the inclusion of this newer, highly detailed dataset, OpenStreetMap would become much stronger.
+
+<script>
+var opts = {
+  lat: {{ page.center[0].lat }},
+  lon: {{ page.center[0].lon }},
+  zoom: {
+    defaultZoom:{{ page.center[0].zoom }},
+    max:18,
+    min:13
+    }
+  };
+
+$(function() {
+  gfdrr.generateMap('{{page.map}}', opts);
+});
+</script>

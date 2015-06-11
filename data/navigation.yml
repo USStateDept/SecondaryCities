@@ -1,0 +1,20 @@
+en:
+  logo:
+    title: "sylvain durand"
+    url:   "/"
+  projects:
+    title: "projects"
+    url:   "/projects/"
+  about:
+    title: "about"
+    url:   "/about/"
+es:
+  logo:
+    title: "sylvain durand"
+    url:   "/"
+  projects:
+    title: "projets"
+    url:   "/projets/"
+  about:
+    title: "sobre"
+    url:   "/sobre/"

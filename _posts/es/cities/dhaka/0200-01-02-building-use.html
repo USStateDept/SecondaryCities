@@ -1,0 +1,36 @@
+---
+published: true
+layout: interactive
+category: casestudy
+city: dhaka
+title: Building Use
+subtitle: 3D Dhaka buildings showing primary building use
+preview: dhaka.png
+map: "gfdrr.map-zyekuz6n,gfdrr.Building-use"
+center: 
+  - lat: 23.70818
+    lon: 90.41512
+    zoom: 17
+tags: 
+  - dhaka
+  - featured
+---
+
+The 3D model of the city of Dhaka allows planners to visualize the location of various buildings based on their primary use: education, government/services, industrial, commercial, residential, or agricultural / open space. Such building data can assist in the design of new zoning regulations, the allocation of open space, the construction of industrial parks, and new capital improvement projects in locations that promote equitable economic development.
+
+
+<script>
+var opts = {
+  lat: {{ page.center[0].lat }},
+  lon: {{ page.center[0].lon }},
+  zoom: {
+    defaultZoom:{{ page.center[0].zoom }},
+    max:18,
+    min:13
+    }
+  };
+
+$(function() {
+  gfdrr.generateMap('{{page.map}}', opts);
+});
+</script>

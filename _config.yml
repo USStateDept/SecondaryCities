@@ -1,2 +1,14 @@
 baseurl: /SecondaryCities
 permalink: /:categories/:title
+
+defaults:
+  -
+    scope:
+      path: _posts/en
+    values:
+      lang: en
+  -
+    scope:
+      path: _posts/es
+    values:
+      lang: es

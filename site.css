@@ -573,8 +573,8 @@ small {
 }
   .interactive-heading .nav a,
   .header .nav a {
-    float:left;
-    display:block;
+    /*float:left;
+    display:block;*/
     text-decoration: none;
     font-family:Opensans,'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight:bold;
@@ -1460,4 +1460,17 @@ body {
     background: #A6A6A6
 }
 
+li+li { border-left: 3px solid }
+
+ul
+{ 
+overflow-x:hidden;
+white-space:nowrap; 
+width: 100%;
+} 
+
+li
+{ 
+display:inline; 
+} 
 

@@ -3,9 +3,25 @@
     {% unless page.slideshow %}
       <a href='#' id='SecondaryCitiesLogo_white_banner' class='icon3 SecondaryCitiesLogo_white_banner'>Toggle Nav</a>
     {% endunless %}
-    <div class='nav clearfix'>
-      <a href='{{site.baseurl}}/about'{% if page.url == "/about" %}{% endif %}>About</a>
-      <a href='{{site.baseurl}}/cities'{% if page.url == "/cities" %}{% endif %}>Español</a>
+    <div class='nav clearfix' >
+<ul>
+<li>
+      <a href='{{site.baseurl}}/about'{% if page.url == "/about" %}{% endif %}>About&nbsp;</a>
+</li>
+<li>
+
+{% assign posts=site.posts | where:"title", page.title | sort: 'path' %}
+
+{% for post in posts %}
+    <span class="lang">
+        <a href="{{site.baseurl}}{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
+    </span>
+{% endfor %}
+
+</li>
+</ul>
+
+
       <!--
       <a href='{{site.baseurl}}/guide' {% if page.url == "/guide" %}class='active'{% endif %}>Guide</a>
 -->

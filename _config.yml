@@ -6,9 +6,9 @@ defaults:
     scope:
       path: _posts/en
     values:
-      lang: en
+      lang: English
   -
     scope:
       path: _posts/es
     values:
-      lang: es
+      lang: Español

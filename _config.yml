@@ -16,5 +16,7 @@ defaults:
 t:
   English:
     about:  "About"
+    about_link:  "about"
   Español:
     about:  "Sobre"
+    about_link:  "sobre"

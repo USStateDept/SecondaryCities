@@ -1,6 +1,6 @@
 ---
 layout: interactive2
-category: casestudy
+category: projecto
 city: 'cusco'
 title: 'Cusco, Peru'
 subtitle: 'Emerging Partnerships'
@@ -18,7 +18,82 @@ tags:
 - splash
 ---
 
-As detailed in the context of <a href='{{site.baseurl}}/cities/cusco'>Cusco</a>, one aspect of the the Open Cities Project engagement is the collection of asset and exposure data in urban areas in order to create a robust asset inventory. The Open Cities Project collects data through open and participatory methods in partnership with local government agencies, universities, technical communities, and the private sector. Open Cities Kathmandu has to date mapped over 100,000 buildings and collected exposure data for 2256 educational and 350 <a href='{{site.baseurl}}/casestudy/health'>health facilities</a> within Kathmandu Valley.
+{% if page.lang == 'Español' %}
+<!--add id to lang span-->
+  <script type="text/javascript">
+    $("a.Español").addClass('highlight')
+  </script>
+{% endif %}
+
+
+<div class='limiter2'>
+
+      <div class='title-block2'>
+        
+          <h2>
+            {{page.title}}
+            {% if page.subtitle %}
+              <span class='subtitle'>{{page.subtitle}}</span>
+            {% endif %}
+          </h2>
+          <div class='title-block-text'>
+                <div class='prose'>Spanish As detailed in the context of <a href='{{site.baseurl}}/cities/cusco'>Cusco</a>, one aspect of the the Open Cities Project engagement is the collection of asset and exposure data in urban areas in order to create a robust asset inventory. The Open Cities Project collects data through open and participatory methods in partnership with local government agencies, universities, technical communities, and the private sector. Open Cities Kathmandu has to date mapped over 100,000 buildings and collected exposure data for 2256 educational and 350 <a href='{{site.baseurl}}/casestudy/health'>health facilities</a> within Kathmandu Valley.
+                </div>
+          </div>
+
+      </div>
+
+
+     <div class:'static_map'>
+        <img src='http://api.tiles.mapbox.com/v4/mapbox.streets/-71.96,-13.53,11/500x300.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ'>
+     </div>
+
+<!--
+<div class='download_button'>
+  <span class='button toggle'>Download the data</span>
+</div>
+
+<div class='map-containment2'>
+  <div id='map' class='map'></div>
+</div>
+-->
+
+  <!--http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_menu_list-inline&stacked=h-->
+    </br>
+    <h3>Workshop Instructions</h3>
+    </br>
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#home">Day 1</a></li>
+      <li><a data-toggle="tab" href="#menu1">Day 2</a></li>
+      <li><a data-toggle="tab" href="#menu2">Day 3</a></li>
+      <li><a data-toggle="tab" href="#menu3">Day 4</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="home" class="tab-pane fade in active">
+        <h3>Day 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div id="menu1" class="tab-pane fade">
+        <h3>Day 2</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div id="menu2" class="tab-pane fade">
+        <h3>Day 3</h3>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      </div>
+      <div id="menu3" class="tab-pane fade">
+        <h3>Day 4</h3>
+        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      </div>
+    </div>
+
+
+
+</div>
+
+</body>
+</html>
 
 
 

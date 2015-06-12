@@ -12,3 +12,9 @@ defaults:
       path: _posts/es
     values:
       lang: Español
+
+t:
+  English:
+    about:  "About"
+  Español:
+    about:  "Sobre"

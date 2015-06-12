@@ -1,11 +1,13 @@
 ---
 published: true
-layout: about_page
+layout: default
 permalink: /about
 preview: frontpage-cusco2.png
 title: about
 subtitle: Open data today to build resilient and sustainable societies tomorrow
 ---
+
+<!--
 {% assign posts=site.posts | where:"title", page.title | sort: 'path' %}
 <ul>
 {% for post in posts %}
@@ -14,6 +16,14 @@ subtitle: Open data today to build resilient and sustainable societies tomorrow
     </li>
 {% endfor %}
 </ul>
+-->
+
+{% if page.lang == 'English' %}
+<!--add id to lang span-->
+  <script type="text/javascript">
+    $("a.English").addClass('highlight')
+  </script>
+{% endif %}
 
 <div id='about' class='section prose'>
 <!--

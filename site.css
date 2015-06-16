@@ -4,7 +4,6 @@
   v2.0 | 20110126
   License: none (public domain)
 ---------------------------------------------*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -266,6 +265,7 @@ small {
   width:20px;
   height:20px;
   text-indent:-999em;
+  vertical-align: middle
   }
   .slide-control .icon2 {
     width:80px;
@@ -288,32 +288,28 @@ small {
       background-position:-85px -90px;
       }
 
-.icon2.hiu_logo {
+        .icon2.ggi_logo {
             background-position: 0 0;
-            width: 150px;
-            height: 52px;
-            vertical-align:middle
+            width: 225px;
+            height: 86px;
         }
         
         .icon2.unsaac_logo {
-            background-position: 0 -52px;
+            background-position: 0 -86px;
             width: 86px;
-            height: 116px;
-            vertical-align:middle
+            height: 111px;
         }
         
         .icon2.esrilogo {
-            background-position: -150px 0;
-            width: 80px;
-            height: 101px;
-            vertical-align:middle
+            background-position: -86px -86px;
+            width: 70px;
+            height: 88px;
         }
         
         .icon2.usdos-logo-seal {
-            background-position: -230px 0;
+            background-position: -225px 0;
             width: 86px;
             height: 86px;
-            vertical-align:middle
         }
 
 .icon {

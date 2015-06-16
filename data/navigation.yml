@@ -16,6 +16,6 @@ es:
     title: "projets"
     url:   "/projets/"
   about:
-    title: "sobre"
-    url:   "/sobre/"
+    title: "es/sobre/"
+    url:   "es/sobre/"
 

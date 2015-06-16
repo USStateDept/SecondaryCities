@@ -1,45 +1,45 @@
-/* glue: 0.11.1 hash: 3f0c1cbf40 */
-        .sprite-footer_logos-hiu_logo,
-.sprite-footer_logos-unsaac_logo3,
-.sprite-footer_logos-esrilogo,
-.sprite-footer_logos-usdos-logo-seal {
+/* glue: 0.11.1 hash: 5b69aec62b */
+        .sprite-footer_logos-GGI_logo,
+.sprite-footer_logos-unsaac_logo4,
+.sprite-footer_logos-esrilogo2,
+.sprite-footer_logos-usdos-logo-seal2 {
             background-image: url('footer_logos.png');
             background-repeat: no-repeat;
         }
         
-        .sprite-footer_logos-hiu_logo {
+        .sprite-footer_logos-GGI_logo {
             background-position: 0 0;
-            width: 150px;
-            height: 52px;
+            width: 225px;
+            height: 86px;
         }
         
-        .sprite-footer_logos-unsaac_logo3 {
-            background-position: 0 -52px;
+        .sprite-footer_logos-unsaac_logo4 {
+            background-position: 0 -86px;
             width: 86px;
-            height: 116px;
+            height: 111px;
         }
         
-        .sprite-footer_logos-esrilogo {
-            background-position: -150px 0;
-            width: 80px;
-            height: 101px;
+        .sprite-footer_logos-esrilogo2 {
+            background-position: -86px -86px;
+            width: 70px;
+            height: 88px;
         }
         
-        .sprite-footer_logos-usdos-logo-seal {
-            background-position: -230px 0;
+        .sprite-footer_logos-usdos-logo-seal2 {
+            background-position: -225px 0;
             width: 86px;
             height: 86px;
         }
         
         @media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (-o-min-device-pixel-ratio: 100/100), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {
-            .sprite-footer_logos-hiu_logo,
-    .sprite-footer_logos-unsaac_logo3,
-    .sprite-footer_logos-esrilogo,
-    .sprite-footer_logos-usdos-logo-seal {
+            .sprite-footer_logos-GGI_logo,
+    .sprite-footer_logos-unsaac_logo4,
+    .sprite-footer_logos-esrilogo2,
+    .sprite-footer_logos-usdos-logo-seal2 {
                 background-image: url('footer_logos.png');
-                -webkit-background-size: 316px 168px;
-                -moz-background-size: 316px 168px;
-                background-size: 316px 168px;
+                -webkit-background-size: 311px 197px;
+                -moz-background-size: 311px 197px;
+                background-size: 311px 197px;
             }
         }
         

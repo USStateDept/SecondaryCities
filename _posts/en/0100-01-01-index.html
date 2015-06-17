@@ -5,14 +5,14 @@ permalink: /
 title: 'home'
 slideshow: 
   - slide: "frontpage-cusco.png"
-    title: Urban and Open
-    subtitle: Making urban planning data better by making it more open
+    title: Creating Data
+    subtitle: Developing data through geospatial data collection techniques using GIS, GPS, satellite imagery, and field data.
   - slide: "frontpage-cusco2.png"
-    title: Disaster Risk Mitigation
-    subtitle: Leveraging open data sets for disaster risk mitigation modeling and rescue and relief efforts
+    title: Resilience
+    subtitle: Tapping into the capacity of a community to recover from stress, disaster, and catastrophy through community engagement and participatory mapping.
   - slide: "frontpage-cusco3.png"
-    title: "Your World, Your Map"
-    subtitle: "Adding society-critical datasets to the the free, citizen-powered <a href=\"//openstreetmap.org/?lat=19.5&lon=88&zoom=5&layers=M\">OpenStreetMap</a>, with global coverage and street level detail"
+    title: "Emergency preparedness"
+    subtitle: "Anticipating disaster and humanitarian needs through targeted data collection of place-based risk and hazards"
 ---
 <!--
 {% assign posts=site.posts | where:"title", page.title | sort: 'path' %}
@@ -35,9 +35,9 @@ slideshow:
 <div class='section dark'>
   <div class='limiter'>
     <div id='tagline' class='centered'>
-      <p>English Secondary Cities is a growing partnership that aims to catalyze the creation, management and use of open data to produce innovative solutions for urban planning and resilience challenges across South Asia.</p>
+      <p>Secondary Cities creates partnerships meant to catalyze the creation, management and use of open data along with the application of innovation and technology to enable more resilient, sustainable, and better mapped cities.</p>
       </div>
-    <h4 class='title centered'>Select Case Studies<br /> <span class='subtitle'>Discover innovative uses of open data to empower resilient communities</span></h4>
+    <h4 class='title centered'>Select Case Studies<br /> <span class='subtitle'>Discover innovative examples of open data and community empowerment</span></h4>
     <ul class='activities grid clearfix'>
       {% for case in site.categories.casestudy%}
         {% if page.lang == case.lang %}
@@ -49,11 +49,11 @@ slideshow:
                   <div class='label'>
                     {% for name in site.categories.cities %}
                       {% if name.city == case.city %}
-                        {{name.title}}
+                        <!--{{name.title}}-->
                       {% endif %}
                     {% endfor %}
                   </div>
-                  <h4 class='case-title'>{{case.title}}</h4>
+                  <h4 class='case-title'>{{case.title}}, {{case.country}}</h4>
                   <p class='city-desc'>{{case.subtitle | truncate:120}}</p>
                   <span class='more'>More</span>
                 </a>

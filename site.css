@@ -221,7 +221,7 @@ small {
 .subtitle {
   font-size:22px;
   line-height:28px;
-  color:#8897a0;
+  color:#483D8B;
   font-weight:normal;
   }
   .header.map .subtitle {
@@ -664,7 +664,7 @@ content: none;
   #tagline {
 	  font-size:28px;
     line-height:40px;
-    color:#999;
+    color:#483D8B;
 		margin:30px 0px 40px;
 		}
 

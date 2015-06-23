@@ -1455,15 +1455,17 @@ img#cover {
 
 
 body {
-    margin: 5px;
     background: #A6A6A6
+    padding: 0;
+    max-width: 1800px;
+    margin: 0px auto;
 }
 
 li+li { border-left: 3px solid }
 
 ul
 { 
-overflow-x:hidden;
+/*overflow-x:hidden;*/
 white-space:nowrap; 
 width: 100%;
 } 

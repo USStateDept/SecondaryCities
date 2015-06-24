@@ -42,7 +42,7 @@ tags:
 
 <div class='limiter2'>
 
-    <div class="top_panel">
+    <section class="top_panel">
 
           <div class='title-block-text'>
                 <div class='prose'>Nestled high in the Andes Mountains in southeastern Peru, Cusco is rich with history. Cusco was the historic capital of the Inca Empire from the 13th to the 16th century and is declared a World Heritage Site by UNESCO. As the location of the Secondary Cities's Pilot project, the proposal is to build an open source, scale-able geodataset through enhancing local expertise and facilitating alignment between communities, governments and agencies. Cusco is a dynamic environment facing risks including flooding and landslides. Secondary Cities is promoting geospatial technologies and map making to address essential planning issues through partnering with the National University of Saint Anthony the Abbot of Cusco, the Office of the Geographer, the US Embassy, and ESRI.
@@ -50,16 +50,21 @@ tags:
           </div>
 
 
-        <div class="static_map cusco_circular_zoomedout"></div>
-
-        <div class="static_map cusco_circular_zoomedin"></div>
-
-        <figure>
+        <figure id="changedetection">
                 <a href="{{site.baseurl}}/cusco-change-detection"><img src="{{site.baseurl}}/img/cusco_change_dect.png" style="width:500px"></a>
                 <figcaption>Fig. - detecting change in the built-up area around Cusco from 2000 to 2014</figcaption>
         </figure>
 
-    </div>
+    </section>
+
+
+    <section class='section snapshot'>
+
+        <div class="static_map"  id="cusco_circular_zoomedout"></div>
+
+        <div class="static_map" id="cusco_circular_zoomedin"></div>
+
+    </section>
 <!--
      <div class:'static_map'>
         <img src='http://api.tiles.mapbox.com/v4/mapbox.streets/-71.96,-13.53,11/500x300.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ'>

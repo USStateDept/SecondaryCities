@@ -1,0 +1,50 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+
+{% include dochead.html %}
+
+</head>
+
+<body>
+<div class='interactive'>
+  <div class='interactive-heading'>
+    <div class='globals'>
+
+      <div class='limiter'>
+        <a href='#' class='close'>&times;</a>
+        <a href='#' id='toggle' class='icon toggle'>Toggle Nav</a>
+        <div class='nav clearfix'>
+            <ul>
+              <li>
+                    <!--<a href='{{site.baseurl}}/about'{% if page.url == "/about" %}{% endif %}>About&nbsp;</a>-->
+                    <!--using global variables specified in the config file-->
+                    <a href='{{site.baseurl}}/{{site.t.[page.lang].lang}}/{{site.t.[page.lang].about_link}}'{% if page.url == "/about" %}{% endif %}>{{site.t.[page.lang].about}}&nbsp;</a>
+              </li>
+              <li>
+
+              {% assign posts=site.posts | where:"title", page.title | sort: 'path' %}
+
+              {% for post in posts %}
+                  <span class="lang">
+                      <a href="{{site.baseurl}}{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
+                  </span>
+              {% endfor %}
+
+              </li>
+          </ul>
+        </div>
+        <!--the logo for the banner-->
+        <a href='{{site.baseurl}}/{{site.t.[page.lang].home_link}}' class='icon3 SecondaryCitiesLogo_white_banner'>Open Cities</a><a href='{{site.baseurl}}/cities/{{page.city}}' id='city_header' >in {{page.city | capitalize}}</a>
+        <!--<a href='{{site.baseurl}}/'><img src='{{site.baseurl}}/img/SecondaryCitiesLogo_white.png' width='150px'></a>-->
+      </div>
+
+    </div>
+  </div>
+</div>l
+
+<div class='display'>
+{{content}}
+</div>

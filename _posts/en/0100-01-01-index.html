@@ -94,27 +94,24 @@ slideshow:
 
 <div class='section data-coverage'>
   <h4 class='title centered'>Secondary Cities</h4>
-  <div class='map' id='data-coverage'>
+  <div class='map' id='map'>
     <small class='attribution'>Map visualizes the locations of Secondary Cities.</small>
   </div>
 </div>
 
 <script>
-  var map = mapbox.map('data-coverage', mapbox.layer().id('saman.map-nzxr8zw8'), null, [
-        easey_handlers.DragHandler(),
-        easey_handlers.DoubleClickHandler()
-  ]);
+L.mapbox.accessToken = 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ';
+var map = L.mapbox.map('map', 'hiu.TestMe2', {
+  zoomControl: false
+}).setView([30, 10], 3);
 
-  map.setZoomRange(4, 4);
-  map.zoom(4).center({
-    lat:22.384,
-    lon:90.055
-  });
+// Disable drag and zoom handlers.
+map.dragging.disable();
+map.touchZoom.disable();
+map.doubleClickZoom.disable();
+map.scrollWheelZoom.disable();
 
-  $('.toggle').click(function() {
-      $('.toggled').addClass('on');
-      $('.toggle').remove();
-      return false;
-  });
+// Disable tap handler, if present.
+if (map.tap) map.tap.disable();
 
 </script>

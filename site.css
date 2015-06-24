@@ -478,6 +478,9 @@ small {
   padding:0 20px;
   margin-top: 20px;
   }
+.headinglimiter {
+  margin:0 auto;
+  }
   .col80 {
     width:80%;
     margin:0 auto;

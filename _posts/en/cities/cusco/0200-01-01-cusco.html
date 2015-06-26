@@ -45,24 +45,31 @@ tags:
     <section class="top_panel">
 
           <div class='title-block-text'>
-                <div class='prose'>Nestled high in the Andes Mountains in southeastern Peru, Cusco is rich with history. Cusco was the historic capital of the Inca Empire from the 13th to the 16th century and is declared a World Heritage Site by UNESCO. As the location of the Secondary Cities's Pilot project, the proposal is to build an open source, scale-able geodataset through enhancing local expertise and facilitating alignment between communities, governments and agencies. Cusco is a dynamic environment facing risks including flooding and landslides. Secondary Cities is promoting geospatial technologies and map making to address essential planning issues through partnering with the National University of Saint Anthony the Abbot of Cusco, the Office of the Geographer, the US Embassy, and ESRI.
+                <div class='prose'>Nestled high in the Andes Mountains in southeastern Peru, Cusco is rich with history. Cusco was the historic capital of the Inca Empire from the 13th to the 16th century and is declared a World Heritage Site by UNESCO. As the location of the Secondary Cities Pilot project, the proposal is to build local capacity in geospatial science through a long-term engagement in the community. Cusco is a dynamic environment facing risks including flooding and landslides. Secondary Cities is promoting geospatial technologies and map making to address essential planning issues through partnering with the National University of Saint Anthony the Abbot of Cusco, the Office of the Geographer, the US Embassy, and ESRI.
                 </div>
           </div>
 
 
         <figure id="changedetection">
-                <a href="{{site.baseurl}}/cusco-change-detection"><img src="{{site.baseurl}}/img/cusco_change_dect.png" style="width:500px"></a>
+                <a href="{{site.baseurl}}/cusco-change-detection"><img src="{{site.baseurl}}/img/cusco_change_dect.png" style="width:400px"></a>
                 <figcaption>Fig. - detecting change in the built-up area around Cusco from 2000 to 2014</figcaption>
         </figure>
 
     </section>
 
+<!--<section class='section snapshot' style="background: url('{{site.baseurl}}/img/SouthAmericaZoomedOut.png') no-repeat">-->
 
-    <section class='section snapshot'>
+<!--http://stackoverflow.com/questions/28329234/can-i-use-liquid-tags-in-css-to-have-jekyll-use-a-different-background-image-on-->
+    <section class='section snapshot' style="background: url('{{site.baseurl}}/img/WebsiteBackgroundMap-1200w.png') no-repeat">
 
-        <div class="static_map"  id="cusco_circular_zoomedout"></div>
+
+
+        <!--<div class="static_map"  id="cusco_circular_zoomedout"></div>-->
+        <div class="static_map" id="cusco_circular_zoomedout"  style="background: url('{{site.baseurl}}/img/SouthAmericaZoomedOut-300w.png') no-repeat"></div>
 
         <div class="static_map" id="cusco_circular_zoomedin"></div>
+
+        
 
     </section>
 <!--
@@ -82,6 +89,7 @@ tags:
 
 <!--http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_menu_list-inline&stacked=h-->
 
+<div class='tabdiv'>
     <div>
         </br>
             <h3>Workshop Instructions</h3>
@@ -92,28 +100,47 @@ tags:
       <li><a data-toggle="tab" href="#menu1">Day 2</a></li>
       <li><a data-toggle="tab" href="#menu2">Day 3</a></li>
       <li><a data-toggle="tab" href="#menu3">Day 4</a></li>
+      <li><a data-toggle="tab" href="#menu4">Day 5</a></li>
+      <li><a data-toggle="tab" href="#menu5">Additional Materials</a></li>
+      <li><a data-toggle="tab" href="#menu6">Workshop Project</a></li>
     </ul>
 
     <div class="tab-content">
       <div id="home" class="tab-pane fade in active">
         <h3>Day 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Lab1_ArcGISIntroduction_ml.pdf">Exercise 1</a></p>
       </div>
       <div id="menu1" class="tab-pane fade">
         <h3>Day 2</h3>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Peru_Cusco_Exercise2_2015_ver2.pdf">Exercise 2</a></p>
       </div>
       <div id="menu2" class="tab-pane fade">
         <h3>Day 3</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Exercise3_2015_ml.pdf">Exercise 3</a></p>
       </div>
       <div id="menu3" class="tab-pane fade">
         <h3>Day 4</h3>
-        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Exercise 4ab_ml.pdf">Exercise 4</a></p>
+      </div>
+      <div id="menu4" class="tab-pane fade">
+        <h3>Day 5</h3>
+        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/SC_Cusco_Exercise5_ml.pdf">Exercise 5</a></p>
+      </div>
+      <div id="menu5" class="tab-pane fade">
+        <h3>Additional Materials</h3>
+        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Additional exercises.pdf">Additional exercises</a></p>
+        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Spatial Thinking.pdf">Spatial Thinking</a></p>
+        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/The 13 themes of Human Geography.pdf">The 13 themes of Human Geography</a></p>
+      </div>
+      <div id="menu6" class="tab-pane fade">
+        <h3>Workshop Project</h3>
+        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Atlas_FieldPapers_OSM.pdf">Field Papers Atlas: OSM basemap</a></p>
+        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Atlas_FieldPapers_Sat.pdf">Field Papers Atlas: Satellite basemap</a></p>
+        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Workshop Project.pdf">Field Papers Atlas: OSM basemap --version 2</a></p>
       </div>
     </div>
 
-
+</div>
 
 </div>
 

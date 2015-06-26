@@ -422,10 +422,7 @@ small {
   background: #FFFFFF;
   padding:40px 0;
   }
-.snapshot {
-  background: #101010;
-  padding:40px 0;
-  }
+
 .prose {
   font:16px/24px Opensans,'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing:subpixel-antialiased;
@@ -661,6 +658,13 @@ content: none;
     position:relative;
     z-index:10;
     }
+
+  .map-title {
+    width:20%;
+    margin:-70px auto 80px 450px;
+    position:relative;
+    z-index:10;
+}
   .section .viewport {
     background:#101010;
     margin:20px 0;
@@ -679,18 +683,27 @@ content: none;
       }
 
   .section.snapshot {
-    background: #F6F6F6 url(img/dot-matrix.png) repeat 0 0;
+    padding:40px 0;
     }
     .section.shapshot .title {
       color:#000000;
       }
 
   #tagline {
-	  font-size:28px;
+    font-size:30px;
     line-height:40px;
     color:#233968;
-		margin:30px 0px 40px;
-		}
+    margin:30px 0px 40px;
+    }
+
+/*http://stackoverflow.com/questions/9877878/need-to-align-list-items-to-center-of-div*/
+  #taglist {
+    font-size:24px;
+    line-height:40px;
+    color:#233968;
+    width: 738px;
+    margin:25px auto 50px;
+    }
 
 /* Partners Section on page: About */
 .section .partners a {
@@ -1484,10 +1497,24 @@ body {
     margin: 0px auto;
 }
 
+/*
 li+li { 
 border-left: 3px solid; 
 color: #fff;
 text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+*/
+
+#mission_statement { 
+
+text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.menu_list li+li { 
+border-left: 3px solid; 
+color: #fff;
+text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+display:inline; 
 }
 
 ul
@@ -1497,15 +1524,17 @@ white-space:nowrap;
 width: 100%;
 } 
 
-li
-{ 
+
+.menu_list li { 
 display:inline; 
 } 
+
 
 .highlight {
   background-color: #000080;
   padding: 5px;
 }
+
 
 /*http://bavotasan.com/2011/circular-images-with-css3/*/
 #cusco_circular_zoomedin {
@@ -1516,7 +1545,8 @@ display:inline;
   border-radius: 150px;
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
-  background: url("http://api.tiles.mapbox.com/v4/mapbox.streets/-71.85,-13.53,10/500x300.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ") no-repeat;
+  background: url("http://api.tiles.mapbox.com/v4/mapbox.outdoors/-71.05,-13.53,7/500x300.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ") no-repeat;
+  box-shadow: 0px 0px 40px 0px #585858;
   }
 
 /*https://www.mapbox.com/developers/api/static/#overlay*/
@@ -1529,7 +1559,8 @@ display:inline;
   border-radius: 150px;
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
-  background: url("http://api.tiles.mapbox.com/v4/mapbox.streets/pin-m-star+256(-71.85,-13.53)/-55.85,-10.53,3/500x300.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ") no-repeat;
+  background: url("http://api.tiles.mapbox.com/v4/mapbox.dark/pin-m-star+256(-71.85,-13.53)/-55.85,-10.53,3/500x300.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ") no-repeat;
+  box-shadow: 0px 0px 40px 0px #585858;
   }
 
 #changedetection {
@@ -1546,4 +1577,8 @@ display:inline;
 
 #mainbody {
   margin: 0 auto;
+}
+
+.tabdiv {
+  margin: 0px 0px 100px 0px;
 }

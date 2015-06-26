@@ -18,7 +18,7 @@
           <a href='#' class='close'>&times;</a>
           <a href='#' id='toggle' class='icon toggle'>Toggle Nav</a>
           <div class='nav clearfix'>
-              <ul>
+              <ul class='menu_list'>
                 <li>
                       <!--<a href='{{site.baseurl}}/about'{% if page.url == "/about" %}{% endif %}>About&nbsp;</a>-->
                       <!--using global variables specified in the config file-->
@@ -38,7 +38,7 @@
             </ul>
           </div>
           <!--the logo for the banner-->
-          <a href='{{site.baseurl}}/{{site.t.[page.lang].home_link}}' class='icon3 SecondaryCitiesLogo_white_banner'>Open Cities</a><a href='{{site.baseurl}}/cities/{{page.city}}' id='city_header' >in {{page.city | capitalize}}</a>
+          <a href='{{site.baseurl}}/{{site.t.[page.lang].home_link}}' class='icon3 SecondaryCitiesLogo_white_banner'>Open Cities</a><span id='city_header' >in {{page.city | capitalize}}</span>
           <!--<a href='{{site.baseurl}}/'><img src='{{site.baseurl}}/img/SecondaryCitiesLogo_white.png' width='150px'></a>-->
         </div>
 

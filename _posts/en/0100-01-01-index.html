@@ -63,7 +63,8 @@ slideshow:
           {% for tag in case.tags %}
             {% if tag == 'splash' %}
               <li>
-                <a href='{{site.baseurl}}{{case.url}}' style='background-image:url("http://api.tiles.mapbox.com/v3/{{case.map}}/{{case.center[0].lon}},{{case.center[0].lat}},{{case.center[0].zoom}}/640x300.png");'>
+                <!--<a href='{{site.baseurl}}{{case.url}}' style='background-image:url("http://api.tiles.mapbox.com/v3/{{case.map}}/{{case.center[0].lon}},{{case.center[0].lat}},{{case.center[0].zoom}}/640x300.png");'>-->
+                <a href='{{site.baseurl}}{{case.url}}' style='background-image:url("http://api.tiles.mapbox.com/v4/hiu.c41pds4i/-72.5,-14.548,7/640x300.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ");'>
                   <div class='overlay'></div>
                   <div class='label'>
                     {% for name in site.categories.cities %}

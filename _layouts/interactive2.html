@@ -51,5 +51,15 @@
     </div>
   </div>
 
+{% if page.lang == 'English' %}
+    <!--add id to lang span-->
+      <script type="text/javascript">
+        $("a.English").addClass('highlight')
+      </script>
+    {% elsif page.lang == 'Español' %}
+      <script type="text/javascript">
+        $("a.Español").addClass('highlight')
+      </script>
+    {% endif %}
 
 {{content}}

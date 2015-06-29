@@ -42,7 +42,7 @@ slideshow:
     </div>
     <h4 class='title centered'>Select Case Studies<br /> <span class='subtitle'>Discover innovative examples of open data and community empowerment</span></h4>
     <ul class='activities grid clearfix'>
-      {% for case in site.categories.casestudy%}
+      {% for case in site.categories.projecto%}
         {% if page.lang == case.lang %}
           {% for tag in case.tags %}
             {% if tag == 'splash' %}

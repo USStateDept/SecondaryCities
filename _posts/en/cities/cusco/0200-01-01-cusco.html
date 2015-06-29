@@ -19,14 +19,6 @@ tags:
 - splash
 ---
 
-{% if page.lang == 'English' %}
-<!--add id to lang span-->
-  <script type="text/javascript">
-    $("a.English").addClass('highlight')
-  </script>
-{% endif %}
-
-
 <div class='limiter2'>
 
     <div class='title-block2'>
@@ -57,9 +49,10 @@ tags:
 
     </section>
 
-<!--<section class='section snapshot' style="background: url('{{site.baseurl}}/img/SouthAmericaZoomedOut.png') no-repeat">-->
+    <!--<section class='section snapshot' style="background: url('{{site.baseurl}}/img/SouthAmericaZoomedOut.png') no-repeat">-->
 
-<!--http://stackoverflow.com/questions/28329234/can-i-use-liquid-tags-in-css-to-have-jekyll-use-a-different-background-image-on-->
+    <!--http://stackoverflow.com/questions/28329234/can-i-use-liquid-tags-in-css-to-have-jekyll-use-a-different-background-image-on-->
+
     <section class='section snapshot' style="background: url('{{site.baseurl}}/img/WebsiteBackgroundMap-1200w.png') no-repeat">
 
 
@@ -70,14 +63,14 @@ tags:
         <!--<div class="static_map" id="cusco_circular_zoomedin"></div>-->
         <div class="static_map" id="cusco_circular_zoomedin"  style="background: url('{{site.baseurl}}/img/CuscoZoomedIn-300w.png') no-repeat"></div>
 
-        
-
     </section>
+
 <!--
      <div class:'static_map'>
         <img src='http://api.tiles.mapbox.com/v4/mapbox.streets/-71.96,-13.53,11/500x300.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ'>
      </div>
 -->
+
 <!--
     <div class='download_button'>
       <span class='button toggle'>Download the data</span>
@@ -90,58 +83,59 @@ tags:
 
 <!--http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_menu_list-inline&stacked=h-->
 
-<div class='tabdiv'>
-    <div>
-        </br>
-            <h3>Workshop Instructions</h3>
-        </br>
-    </div>
-    <ul class="nav nav-tabs">
-      <li class="active"><a data-toggle="tab" href="#home">Day 1</a></li>
-      <li><a data-toggle="tab" href="#menu1">Day 2</a></li>
-      <li><a data-toggle="tab" href="#menu2">Day 3</a></li>
-      <li><a data-toggle="tab" href="#menu3">Day 4</a></li>
-      <li><a data-toggle="tab" href="#menu4">Day 5</a></li>
-      <li><a data-toggle="tab" href="#menu5">Additional Materials</a></li>
-      <li><a data-toggle="tab" href="#menu6">Workshop Project</a></li>
-    </ul>
+  <div class='tabdiv'>
+      <div>
+          </br>
+              <h3>Workshop Instructions</h3>
+          </br>
+      </div>
 
-    <div class="tab-content">
-      <div id="home" class="tab-pane fade in active">
-        <h3>Day 1</h3>
-        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Lab1_ArcGISIntroduction_ml.pdf">Exercise 1</a></p>
-      </div>
-      <div id="menu1" class="tab-pane fade">
-        <h3>Day 2</h3>
-        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Peru_Cusco_Exercise2_2015_ver2.pdf">Exercise 2</a></p>
-      </div>
-      <div id="menu2" class="tab-pane fade">
-        <h3>Day 3</h3>
-        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Exercise3_2015_ml.pdf">Exercise 3</a></p>
-      </div>
-      <div id="menu3" class="tab-pane fade">
-        <h3>Day 4</h3>
-        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Exercise 4ab_ml.pdf">Exercise 4</a></p>
-      </div>
-      <div id="menu4" class="tab-pane fade">
-        <h3>Day 5</h3>
-        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/SC_Cusco_Exercise5_ml.pdf">Exercise 5</a></p>
-      </div>
-      <div id="menu5" class="tab-pane fade">
-        <h3>Additional Materials</h3>
-        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Additional exercises.pdf">Additional exercises</a></p>
-        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Spatial Thinking.pdf">Spatial Thinking</a></p>
-        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/The 13 themes of Human Geography.pdf">The 13 themes of Human Geography</a></p>
-      </div>
-      <div id="menu6" class="tab-pane fade">
-        <h3>Workshop Project</h3>
-        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Atlas_FieldPapers_OSM.pdf">Field Papers Atlas: OSM basemap</a></p>
-        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Atlas_FieldPapers_Sat.pdf">Field Papers Atlas: Satellite basemap</a></p>
-        <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Workshop Project.pdf">Field Papers Atlas: OSM basemap --version 2</a></p>
-      </div>
-    </div>
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Day 1</a></li>
+        <li><a data-toggle="tab" href="#menu1">Day 2</a></li>
+        <li><a data-toggle="tab" href="#menu2">Day 3</a></li>
+        <li><a data-toggle="tab" href="#menu3">Day 4</a></li>
+        <li><a data-toggle="tab" href="#menu4">Day 5</a></li>
+        <li><a data-toggle="tab" href="#menu5">Additional Materials</a></li>
+        <li><a data-toggle="tab" href="#menu6">Workshop Project</a></li>
+      </ul>
 
-</div>
+      <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+          <h3>Day 1</h3>
+          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Lab1_ArcGISIntroduction_ml.pdf">Exercise 1</a></p>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+          <h3>Day 2</h3>
+          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Peru_Cusco_Exercise2_2015_ver2.pdf">Exercise 2</a></p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+          <h3>Day 3</h3>
+          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Exercise3_2015_ml.pdf">Exercise 3</a></p>
+        </div>
+        <div id="menu3" class="tab-pane fade">
+          <h3>Day 4</h3>
+          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Exercise 4ab_ml.pdf">Exercise 4</a></p>
+        </div>
+        <div id="menu4" class="tab-pane fade">
+          <h3>Day 5</h3>
+          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/SC_Cusco_Exercise5_ml.pdf">Exercise 5</a></p>
+        </div>
+        <div id="menu5" class="tab-pane fade">
+          <h3>Additional Materials</h3>
+          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Additional exercises.pdf">Additional exercises</a></p>
+          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Spatial Thinking.pdf">Spatial Thinking</a></p>
+          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/The 13 themes of Human Geography.pdf">The 13 themes of Human Geography</a></p>
+        </div>
+        <div id="menu6" class="tab-pane fade">
+          <h3>Workshop Project</h3>
+          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Atlas_FieldPapers_OSM.pdf">Field Papers Atlas: OSM basemap</a></p>
+          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Atlas_FieldPapers_Sat.pdf">Field Papers Atlas: Satellite basemap</a></p>
+          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Workshop Project.pdf">Field Papers Atlas: OSM basemap --version 2</a></p>
+        </div>
+      </div>
+
+  </div>                                                
 
 </div>
 

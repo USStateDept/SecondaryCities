@@ -526,13 +526,11 @@ small {
     .header .title-block {
       float:left;
       position:relative;
-      margin-top:-5px;
-      margin-left:40px;
-      width:70%;
+      margin-top:-25px;
+      margin-left:65px;
       z-index:100;
       background-color:rgba(0,0,0,0.5);
       padding: 10px;
-      border-radius: 25px;
       }
     .header a {
       color:#fff;

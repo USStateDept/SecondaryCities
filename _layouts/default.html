@@ -6,20 +6,20 @@
 <body id="mainbody">
 
     {% if page.no-header %}
-    <div id='header' class='header no-header'></div>
+      <div id='header' class='header no-header'></div>
     {% elsif page.preview %}
-    <div id='header' class='header' style='background-image:url("{{site.baseurl}}/img/banners/{{page.preview}}");'>
-      <div class='dot-matrix'></div>
-      {% include header.html %}
-      <div class='limiter'>
-        <div class='title-block'>
-          <h2>{{page.title}}</h2>
-            {% if page.subtitle %}
-            <div class='subtitle'>{{page.subtitle}}</div>
-          {% endif %}
+      <div id='header' class='header' style='background-image:url("{{site.baseurl}}/img/banners/{{page.preview}}");'>
+        <div class='dot-matrix'></div>
+        {% include header.html %}
+        <div class='limiter'>
+          <div class='title-block'>
+            <h2>{{page.title}}</h2>
+              {% if page.subtitle %}
+                <div class='subtitle'>{{page.subtitle}}</div>
+              {% endif %}
+          </div>
         </div>
       </div>
-    </div>
 
     {% elsif page.slideshow %}
     <div id='header' class='header slideshow'>
@@ -31,53 +31,35 @@
         <span href='#next' class='icon next'>Next</span>
       </a>
       {% for item in page.slideshow %}
-      <div class='slide {% if item.nocover %}no-cover {% endif %} {% if forloop.first %}active {% endif %} slide-{{forloop.index}}' data-index='slide-{{forloop.index}}' style='background-image:url("{{site.baseurl}}/img/banners/{{item.slide}}");'>
-        <div class='dot-matrix'></div>
-        {% include header.html %}
-        <div class='limiter'>
-          <div class='title-block'>
-            <h2>{{item.title}}</h2>
-            <p class='subtitle'>{{item.subtitle}}</p>
-          </div>
+        <div class='slide {% if item.nocover %}no-cover {% endif %} {% if forloop.first %}active {% endif %} slide-{{forloop.index}}' data-index='slide-{{forloop.index}}' style='background-image:url("{{site.baseurl}}/img/banners/{{item.slide}}");'>
+          <div class='dot-matrix'></div>
+          {% include header.html %}
+            <div class='limiter'>
+              <div class='title-block'>
+                <h2>{{item.title}}</h2>
+                <p class='subtitle'>{{item.subtitle}}</p>
+              </div>
+            </div>
         </div>
-      </div>
       {% endfor %}
-      <script>
-        $(function() {
-          gfdrr.slideShow($('.header'));
-        });
-      </script>
+        <script>
+          $(function() {
+            gfdrr.slideShow($('.header'));
+          });
+        </script>
     </div>
 
-<!--
-    {% elsif page.citiesMap %}
-    <div id='header' class='map header'>
-      {% include header.html %}
+    {% endif %}
 
-      <div class='limiter'>
-        <div class='title-block'>
-          {% for item in site.categories.cities %}
-            {% assign cities = forloop.length %}
-          {% endfor %}
-
-          {% for item in site.categories.casestudy %}
-            {% assign casestudy = forloop.length %}
-          {% endfor %}
-
-          <h2>{{cities}} Cities, {{casestudy}} Case Studies</h2>
-          <p class='subtitle'>Explore current operations at the local level</p>
-        </div>
-      </div>
-
-      <script>
-        var header = document.getElementById('header');
-        $(function() {
-          gfdrr.citiesMap(header, '{{page.citiesMap}}');
-        });
+    {% if page.lang == 'English' %}
+    <!--add id to lang span-->
+      <script type="text/javascript">
+        $("a.English").addClass('highlight')
       </script>
-    </div>
--->
-
+    {% elsif page.lang == 'Español' %}
+      <script type="text/javascript">
+        $("a.Español").addClass('highlight')
+      </script>
     {% endif %}
 
   {{content}}

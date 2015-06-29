@@ -6,32 +6,7 @@ title: 'about'
 subtitle: Using geospatial science and technology improve the sustainability of cities
 ---
 
-<!--
-{% assign posts=site.posts | where:"title", page.title | sort: 'path' %}
-<ul>
-{% for post in posts %}
-    <li class="lang">
-        <a href="{{site.baseurl}}{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
-    </li>
-{% endfor %}
-</ul>
--->
-
-{% if page.lang == 'English' %}
-<!--add id to lang span-->
-  <script type="text/javascript">
-    $("a.English").addClass('highlight')
-  </script>
-{% endif %}
-
 <div id='about' class='section prose'>
-<!--
-    <div class='tabs centered clearfix'>
-      <a href='#involved' class='first' data-scroll>Get Involved</a>
-      <a href='#partners' class='last' data-scroll>Partners</a>
-      <a href='#resources' class='last' data-scroll>Resources</a> 
-    </div> 
--->
 
     <div class='limiter'>
       <div class='col80'>
@@ -39,33 +14,6 @@ subtitle: Using geospatial science and technology improve the sustainability of 
         The project will identify countries with rapidly growing secondary cities where governments have recognized their challenges and are looking to develop policies and programs to foster manageable growth and development. Projects will be implemented in secondary cities—typically non-primary cities with a population ranging from 100,000 to 5 million. The specific emphasis for this project is focused on generating geospatial data for emergency preparedness, a key need in the development of secondary cities. Projects teams will compose of local university academics and students with a focus in geospatial science, regional non-governmental organizations, and partners from local municipalities. Long-term training programs will be designed to build capacity around generating geospatial data from local knowledge, commercial satellite imagery, and other geographic tools. 
       </div>
     </div>
-
-<!--     <div id='partners' class='centered section'>
-      <div class='limiter'>
-        <div class='col80'>
-          <h4 class='title'>Partners <br />
-            <span class='subtitle'>We are a growing coalition of interested stakeholders.</span>
-          </h4>
-          <div class='partners clearfix'>
-            <a href='//gfdrr.org'>
-              <img src='{{site.baseurl}}/img/partners/gfdrr.png' alt='' />
-            </a>
-            <a href='//worldbank.org'>
-              <img src='{{site.baseurl}}/img/partners/world-bank.png' alt='' />
-            </a>
-            <a href='//hot.openstreetmap.org'>
-              <img src='{{site.baseurl}}/img/partners/hot.png' alt='' />
-            </a>
-            <a href='//openstreetmap.org'>
-              <img src='{{site.baseurl}}/img/partners/osm.png' alt='' />
-            </a>
-            <a href='//developmentseed.org'>
-              <img src='{{site.baseurl}}/img/partners/devseed.png' alt='' />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <div id='involved' class='centered section'>
       <div class='limiter'>
@@ -78,5 +26,4 @@ subtitle: Using geospatial science and technology improve the sustainability of 
         </div>
       </div>
     </div>
-    </div>
-  </div>
+</div>

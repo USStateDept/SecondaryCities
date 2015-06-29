@@ -14,23 +14,8 @@ slideshow:
     title: "Emergency preparedness"
     subtitle: "Enhancing understanding of secondary cities through data and mapping to better prepare for and respond to emergencies"
 ---
-<!--
-{% assign posts=site.posts | where:"title", page.title | sort: 'path' %}
-<ul>
-{% for post in posts %}
-    <li class="lang">
-        <a href="{{site.baseurl}}{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
-    </li>
-{% endfor %}
-</ul>
--->
 
-{% if page.lang == 'English' %}
-<!--add id to lang span-->
-  <script type="text/javascript">
-    $("a.English").addClass('highlight')
-  </script>
-{% endif %}
+<!--need a comment here for page to display correctly-->
 
 <div class='section dark'>
   <div class='limiter'>
@@ -84,31 +69,6 @@ slideshow:
       {% endfor %}
     </ul>
 
-<!--
-    <div class='centered'>
-      <a href='#' class='button toggle'>Load More</a>
-    </div>
--->
-    <ul class='activities grid toggled clearfix'>
-      {% for case in site.categories.casestudy offset:3 %}
-      <li>
-        <a href='{{site.baseurl}}{{case.url}}' style='background-image:url("http://api.tiles.mapbox.com/v3/{{case.map}}/{{case.center[0].lon}},{{case.center[0].lat}},{{case.center[0].zoom}}/640x300.png");'>
-          <div class='overlay'></div>
-          <div class='label'>
-            {% for name in site.categories.cities %}
-              {% if name.city == case.city %}
-                {{name.title}}
-              {% endif %}
-            {% endfor %}
-          </div>
-          <h4 class='case-title'>
-            {{case.title}}</h4>
-          <p class='city-desc'>{{case.subtitle | truncate:120}}</p>
-          <span class='more'>More</span>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
   </div>
 </div>
 

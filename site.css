@@ -659,7 +659,7 @@ content: none;
 
   .map-title {
     width:20%;
-    margin:-70px auto 80px 450px;
+    margin:-70px auto 80px 26%;
     position:relative;
     z-index:10;
 }
@@ -886,9 +886,11 @@ content: none;
       z-index:100;
       text-shadow:none;
       text-shadow:0 1px 2px rgba(0,0,0,0.5);
+/*
       -webkit-filter:grayscale(1);
       -webkit-animation-duration:300ms;
       -webkit-animation-name:colorDown;
+*/
       }
       .projects .activities .overlay,
       .activities .overlay {
@@ -907,6 +909,7 @@ content: none;
         width:75%;
         z-index:10;
         }
+/*
       .activities li a .more {
         background-color:#28679B;
         color:#fff;
@@ -926,8 +929,30 @@ content: none;
              -o-transition:right 100ms;
                 transition:right 100ms;
         }
+*/
+      .activities li a .more {
+        background-color:#E8E9B4;
+        color:#28679B;
+        font-weight:bold;
+        text-shadow:none;
+        position:absolute;
+        bottom:0;
+        right:0px;
+        display:inline-block;
+        height:50px;
+        line-height:50px;
+        text-align:center;
+        padding:0 20px;
+        z-index:10;
+        }
+/*
         .activities li a:hover .more {
           right:0;
+          }
+*/
+        .activities li a:hover .more {
+          background-color:#32CD32;
+          color:#fff;
           }
         .activities.grid li a .more {
           top:0;

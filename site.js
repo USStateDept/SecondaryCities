@@ -1,7 +1,7 @@
 ---
 ---
 {% include ext/jquery.min.js %}
-{% include ext/Blob/Blob.js %}
+{% include ext/blob/blob.js %}
 {% include ext/canvas-toBlob/canvas-toBlob.js %}
 {% include ext/FileSaver/FileSaver.js %}
 

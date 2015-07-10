@@ -1,2 +1,2 @@
-baseurl: /SecondaryCities
+#baseurl: /SecondaryCities
 permalink: /:categories/:title

@@ -2,8 +2,8 @@
 ---
 {% include ext/jquery.min.js %}
 {% include ext/blob/blob.js %}
-{% include ext/canvas-toBlob/canvas-toBlob.js %}
-{% include ext/FileSaver/FileSaver.js %}
+{% include ext/canvas-toblob/canvas-toblob.js %}
+{% include ext/filesaver/filesaver.js %}
 
 ;(function(context) {
 

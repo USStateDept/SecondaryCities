@@ -470,7 +470,7 @@ small {
   padding:0 20px;
   }
 .bodylimiter {
-  width:70%;
+  width:90%;
   margin:0 auto;
   padding:0 20px;
   margin-top: 20px;
@@ -1509,8 +1509,10 @@ img#cover {
 
 .accordion dd p:first-child{padding:0;border:0;}
 .accordion .hide{max-height:none;}
-.infographics img.img-responsive,.infographics .btn,.accordion .js-control,.promo-box,.story-promo,.video,.social,#footer .legal,#footer nav,#footer .footer-nav{display:none!important;}
 
+/*
+.infographics img.img-responsive,.infographics .btn,.accordion .js-control,.promo-box,.story-promo,.video,.social,#footer .legal,#footer nav,#footer .footer-nav{display:none!important;}
+*/
 
 
 body {
@@ -1554,7 +1556,7 @@ display:inline;
 
 
 .highlight {
-  background-color: #000080;
+  background-color: #233968;
   padding: 5px;
 }
 
@@ -1564,7 +1566,7 @@ display:inline;
   width: 300px;
   height: 300px;
   margin: 15px;
-  margin-left: 100px;
+  margin-left: 40px;
   border-radius: 150px;
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
@@ -1577,7 +1579,7 @@ display:inline;
   width: 300px;
   height: 300px;
   margin: 15px;
-  margin-right: 100px;
+  margin-right: 40px;
   float: right;
   border-radius: 150px;
   -webkit-border-radius: 150px;
@@ -1590,6 +1592,7 @@ display:inline;
   margin: 15px;
   margin-right: 100px;
   float: right;
+  text-align: center
 }
 
 /*inline-block keeps bottom div from floating up: http://stackoverflow.com/questions/7759837/put-divs-below-floatleft-divs*/
@@ -1604,4 +1607,36 @@ display:inline;
 
 .tabdiv {
   margin: 0px 0px 100px 0px;
+}
+
+.promo-box,.story-promo{margin-bottom:30px;background:url(img/stripes.png) #cdd;background:#233968 url(img/stripes.svg);}
+#main .thumbnail .caption a,#main .promo-box a,#main .story-promo a{text-decoration:none;}
+#main .caption a:hover,#main .promo-box a:hover,#main .story-promo a:hover{text-decoration:underline;}
+.action-link::after,#main .promo-box a::after{content:"\00BB";font-size:1em;display:inline-block;padding-left:5px;}
+.shadowed{box-shadow:1px 1px 7px -3px #888;}
+.promo-box{
+  padding:20px;
+  position:fixed;
+}
+.attribution{padding:0 20px 20px;}
+.story-promo .attribution{text-align:right;}
+.story-promo .quote:before{content:"\201C";font-size:3em;position:absolute;padding:10px 0 0 20px;}
+.story-promo blockquote{padding:30px 20px 20px 40px;font-size:25px;line-height:1.15em;font-style:italic;}
+.promo-box h2{
+  margin-top:0;-webkit-margin-before:0;font-size:25px;
+  color:white;
+}
+.promo-box a{
+  color:white;
+}
+.promo-box ul{list-style-type:none;margin:0;padding:0;}
+.promo-box li{border-top:1px dotted #E8E9B4;line-height:1em;padding:.5em 0;}
+
+.indent {
+  margin:1em;
+  padding:1em;
+}
+
+.restore_wrap {
+  white-space: normal;
 }

@@ -1,0 +1,35 @@
+---
+layout: interactive
+category: casestudy
+city: 'dhaka'
+title: 'Structure Survey Images'
+subtitle: 'Building condition, inhabitants, and associated risks'
+preview: 'dhaka.png'
+map: 'gfdrr.map-zyekuz6n,gfdrr.building-survey'
+center: 
+  - lat: 23.74120
+    lon: 90.41128
+    zoom: 17
+tags:
+- dhaka
+- featured
+---
+
+Although the view from above is always useful, ground-level photos of structures provide useful information to users about a building’s condition, inhabitants, and associated risks. 
+
+<script>
+
+var opts = {
+  lat: {{ page.center[0].lat }},
+  lon: {{ page.center[0].lon }},
+  zoom: {
+    defaultZoom:{{ page.center[0].zoom }},
+    max:17,
+    min:10
+    }
+  };
+
+$(function() {
+  gfdrr.generateMap('{{page.map}}', opts);
+});
+</script>

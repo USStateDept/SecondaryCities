@@ -1,0 +1,34 @@
+---
+published: true
+layout: interactive
+category: casestudy
+city: kathmandu
+title: Community Involvement
+subtitle: Global Mapping at a Local Scale
+preview: kathmandu.png
+map: "gfdrr.map-l97akyeb,gfdrr.kat-roads"
+center: 
+  - lat: 27.7062
+    lon: 85.321
+    zoom: 14
+tags: 
+  - kathmandu
+---
+
+The global and local OpenStreetMap community has contributed to building a robust map of the Kathmandu Valley. From New York to London to Kathmandu, hundreds of individuals have mapped over 2,911 km of roads (2,910,627 meters, 1,808 miles) varying from large main corridors to small “gallis” or alleyways across the city. 
+
+<script>
+var opts = {
+  lat: {{ page.center[0].lat }},
+  lon: {{ page.center[0].lon }},
+  zoom: {
+    defaultZoom:{{ page.center[0].zoom }},
+    max:16,
+    min:13
+    }
+  };
+
+$(function() {
+  gfdrr.generateMap('{{page.map}}', opts);
+});
+</script>

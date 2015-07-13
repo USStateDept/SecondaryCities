@@ -201,10 +201,28 @@ small {
   font-size:13px;
   }
 
+
+.new-space {
+  margin-top:30px;
+  }
+.title-block {
+  margin-top:20px;
+  }
+.title-block2 {
+  margin-top:0px;
+  }
+.title-block-text {
+  width:38%;
+  float:left;
+  margin-top: 25px;
+  margin-left: 20px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+  }
 .subtitle {
   font-size:22px;
   line-height:28px;
-  color:#8897a0;
+  color:#233968;
   font-weight:normal;
   }
   .header.map .subtitle {
@@ -221,12 +239,34 @@ small {
   z-index:10;
   }
 
-.icon2 {
-  background:transparent url(img/sprites7.png) no-repeat 0 0;
+.icon3 {
+  background:transparent url(img/secondary_cities_logos.png) no-repeat 0 0;
   display:block;
   width:20px;
   height:20px;
   text-indent:-999em;
+  }
+  .slide-control .icon3 {
+    width:80px;
+    height:60px;
+    position:absolute;
+    top:50%;
+    margin-top:-30px;
+    }
+
+.icon3.SecondaryCitiesLogo_white_banner {
+            background-position: -3688px -1056px;
+            width: 250px;
+            height: 69px;
+        }
+
+.icon2 {
+  background:transparent url(img/footer_logos.png) no-repeat 0 0;
+  display:block;
+  width:20px;
+  height:20px;
+  text-indent:-999em;
+  vertical-align: middle
   }
   .slide-control .icon2 {
     width:80px;
@@ -249,11 +289,29 @@ small {
       background-position:-85px -90px;
       }
 
-.icon2.esrilogo {width:86px; height:109px; background-position: -604px -2px}
-.icon2.hiu_logo {width:150px; height:52px; background-position: -692px -2px}
-.icon2.secondary_cities_logo3 {width:256px; height:150px; background-position: -2px -2px}
-.icon2.unsaac_logo {width:342px; height:128px; background-position: -260px -2px}
-.icon2.usdos-logo-seal {width:86px; height:86px; background-position: -692px -56px}
+        .icon2.ggi_logo {
+            background-position: 0 0;
+            width: 225px;
+            height: 86px;
+        }
+        
+        .icon2.unsaac_logo {
+            background-position: 0 -86px;
+            width: 86px;
+            height: 111px;
+        }
+        
+        .icon2.esrilogo {
+            background-position: -86px -86px;
+            width: 70px;
+            height: 88px;
+        }
+        
+        .icon2.usdos-logo-seal {
+            background-position: -225px 0;
+            width: 86px;
+            height: 86px;
+        }
 
 .icon {
   background:transparent url(img/sprite.png) no-repeat 0 0;
@@ -343,12 +401,18 @@ small {
     .interactive-heading .globals .close {
       display:none;
       position:absolute;
-      top:49px;
+      top:149px;
       font-size:20px;
       color:#202020;
       text-shadow:none;
       right:20px;
       }
+
+#city_header {
+  font-size: 22px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
 
 .dark {
   background:#101010;
@@ -358,10 +422,11 @@ small {
   background: #FFFFFF;
   padding:40px 0;
   }
+
 .prose {
-  font:15px/24px Opensans,'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font:16px/24px Opensans,'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing:subpixel-antialiased;
-  color:#ccc;
+  color:#545454;
   }
 	#about.prose,
   #guide,prose {
@@ -395,9 +460,23 @@ small {
   Global layout & styling ♥
 ---------------------------------------------*/
 .limiter {
-  width:960px;
+  width:70%;
   margin:0 auto;
   padding:0 20px;
+  }
+.limiter2 {
+  width:70%;
+  margin:0 auto;
+  padding:0 20px;
+  }
+.bodylimiter {
+  width:70%;
+  margin:0 auto;
+  padding:0 20px;
+  margin-top: 20px;
+  }
+.headinglimiter {
+  margin:0 auto;
   }
   .col80 {
     width:80%;
@@ -443,12 +522,15 @@ small {
     .header .limiter {
       position:relative;
       }
+    /*http://stackoverflow.com/questions/806000/how-to-give-text-or-an-image-a-transparent-background-using-css*/
     .header .title-block {
       float:left;
       position:relative;
-      margin-top:120px;
-      width:50%;
+      margin-top:-25px;
+      margin-left:65px;
       z-index:100;
+      background-color:rgba(0,0,0,0.5);
+      padding: 10px;
       }
     .header a {
       color:#fff;
@@ -496,10 +578,14 @@ small {
   z-index:2000;
   font-size: 120%;
   }
+.above {
+  z-index:2000;
+}
   .interactive-heading .nav a,
   .header .nav a {
-    float:left;
-    display:block;
+    /*float:left;
+    display:block;*/
+    text-decoration: none;
     font-family:Opensans,'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight:bold;
     margin-left:10px;
@@ -513,10 +599,12 @@ small {
   padding:40px 0;
   }
 
+
 .nav a:before {
 content: " | ";
 color: #fff;
 }
+
 
 .nav a:first-child:before {
 content: none;
@@ -531,7 +619,7 @@ content: none;
   height:100%;
   position:absolute;
   top:0;left:0;
-  z-index:1;
+  z-index:-1;
   }
 .overlay {
   background:url(img/overlay.png) repeat 0 0;
@@ -568,6 +656,13 @@ content: none;
     position:relative;
     z-index:10;
     }
+
+  .map-title {
+    width:20%;
+    margin:-70px auto 80px 26%;
+    position:relative;
+    z-index:10;
+}
   .section .viewport {
     background:#101010;
     margin:20px 0;
@@ -584,12 +679,29 @@ content: none;
     .section.dark .title {
       color:#000000;
       }
+
+  .section.snapshot {
+    padding:40px 0;
+    }
+    .section.shapshot .title {
+      color:#000000;
+      }
+
   #tagline {
-	  font-size:28px;
+    font-size:30px;
     line-height:40px;
-    color:#999;
-		margin:30px 0px 40px;
-		}
+    color:#233968;
+    margin:30px 0px 40px;
+    }
+
+/*http://stackoverflow.com/questions/9877878/need-to-align-list-items-to-center-of-div*/
+  #taglist {
+    font-size:24px;
+    line-height:40px;
+    color:#233968;
+    width: 738px;
+    margin:25px auto 50px;
+    }
 
 /* Partners Section on page: About */
 .section .partners a {
@@ -774,9 +886,11 @@ content: none;
       z-index:100;
       text-shadow:none;
       text-shadow:0 1px 2px rgba(0,0,0,0.5);
+/*
       -webkit-filter:grayscale(1);
       -webkit-animation-duration:300ms;
       -webkit-animation-name:colorDown;
+*/
       }
       .projects .activities .overlay,
       .activities .overlay {
@@ -795,6 +909,7 @@ content: none;
         width:75%;
         z-index:10;
         }
+/*
       .activities li a .more {
         background-color:#28679B;
         color:#fff;
@@ -814,8 +929,30 @@ content: none;
              -o-transition:right 100ms;
                 transition:right 100ms;
         }
+*/
+      .activities li a .more {
+        background-color:#E8E9B4;
+        color:#28679B;
+        font-weight:bold;
+        text-shadow:none;
+        position:absolute;
+        bottom:0;
+        right:0px;
+        display:inline-block;
+        height:50px;
+        line-height:50px;
+        text-align:center;
+        padding:0 20px;
+        z-index:10;
+        }
+/*
         .activities li a:hover .more {
           right:0;
+          }
+*/
+        .activities li a:hover .more {
+          background-color:#32CD32;
+          color:#fff;
           }
         .activities.grid li a .more {
           top:0;
@@ -996,12 +1133,8 @@ content: none;
 .interactive-heading {
   background:#fff;
   color:#255d91;
-  padding:0 0 20px;
-  position:absolute;
   z-index:5000;
   width:100%;
-  -webkit-box-shadow:0 2px 4px rgba(0,0,0,0.25);
-          box-shadow:0 2px 4px rgba(0,0,0,0.25);
   }
   .interactive-heading.inactive .title-block {
     display:none;
@@ -1021,7 +1154,7 @@ content: none;
     top:5px;
     }
   .interactive-heading .globals {
-    background:#202020 url(img/banners/interactives.png) no-repeat 0 0;
+    background:#202020 url(img/banners/frontpage-cusco4.png) no-repeat 0 0;
     margin-bottom:20px;
     padding:8px 0;
     background-size:cover;
@@ -1073,7 +1206,7 @@ content: none;
   }
 
   .interactive-heading .download_menu a:hover > h2 {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   .download_container:hover div:hover + .download_menu, .download_menu:hover {
@@ -1093,6 +1226,14 @@ content: none;
   height:100%;
   width:100%;
   }
+.map-containment2 {
+  position:absolute;
+  height:70%;
+  width:100%;
+  margin-left:20px;
+  padding: 15px;
+  display: inline;
+  }
 .map {
   background:#232323;
   position:absolute;
@@ -1100,6 +1241,17 @@ content: none;
   width:100%;
   height:100%;
   }
+.map2 {
+  background:#232323;
+  position:absolute;
+  top:0;left:0;
+  width:30%;
+  height:35%;
+  }
+.static_map {
+  width:40%;
+  display:inline-block;
+}
 .attribution {
   background:#202020;
   color:#fff;
@@ -1168,7 +1320,7 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
     }
   .limiter,
   .col80 {
-    width:100%;
+    width:80%;
     padding:0;
     }
     .prose .limiter,
@@ -1214,8 +1366,12 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
 .slide-control {
   height:80px;
   }
-.nav {
-  display:none;
+.nav2 {
+  position:absolute;
+  }
+.div .textabove {
+  display:absolute;
+  z-index:2000;
   }
 .active-nav .nav {
   display:block;
@@ -1334,4 +1490,118 @@ img#cover {
   float:right;
   width:300px;
   margin:0px 0px 10px 20px;
+}
+
+.accordion dt{cursor:pointer;margin-top:10px;padding:10px;}
+.accordion dt:first-child{margin-top:0;}
+.accordion dt[aria-expanded="true"]{background-color:#f7f7f7;}
+.no-js .accordion dt[aria-expanded="true"]{background-color:transparent;}
+.accordion dd{overflow:hidden;max-height:7000px;-webkit-transition:all .3s ease-out;-o-transition:all .3s ease-out;transition:all .3s ease-out;padding:0 40px 10px 40px;background-color:#f7f7f7;}
+.accordion dd:active{outline:0;}
+.no-js .accordion dd{background-color:transparent;}
+.accordion dd p:first-child{border-top:1px dotted #444;padding-top:10px;}
+.no-js dd p:first-child{border:0;}
+.accordion .hide{max-height:0;}
+.accordion .js-control{padding:0 6px;width:20px;display:inline-block;color:white;background-color:#d73f3f;margin-right:10px;}
+@media (min-width: 768px){.accordion .js-control{display:block;float:left;margin-bottom:10px;}
+}
+.lt-ie8 .accordion .js-control{padding-right:0;padding-left:10px;}
+
+.accordion dd p:first-child{padding:0;border:0;}
+.accordion .hide{max-height:none;}
+.infographics img.img-responsive,.infographics .btn,.accordion .js-control,.promo-box,.story-promo,.video,.social,#footer .legal,#footer nav,#footer .footer-nav{display:none!important;}
+
+
+
+body {
+    background: #A6A6A6
+    padding: 0;
+    max-width: 1800px;
+    margin: 0px auto;
+}
+
+/*
+li+li { 
+border-left: 3px solid; 
+color: #fff;
+text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+*/
+
+#mission_statement { 
+
+text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.menu_list li+li { 
+border-left: 3px solid; 
+color: #fff;
+text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+display:inline; 
+}
+
+ul
+{ 
+/*overflow-x:hidden;*/
+white-space:nowrap; 
+width: 100%;
+} 
+
+
+.menu_list li { 
+display:inline; 
+} 
+
+
+.highlight {
+  background-color: #000080;
+  padding: 5px;
+}
+
+
+/*http://bavotasan.com/2011/circular-images-with-css3/*/
+#cusco_circular_zoomedin {
+  width: 300px;
+  height: 300px;
+  margin: 15px;
+  margin-left: 100px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  background: url("http://api.tiles.mapbox.com/v4/mapbox.outdoors/-71.05,-13.53,7/500x300.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ") no-repeat;
+  box-shadow: 0px 0px 40px 0px #585858;
+  }
+
+/*https://www.mapbox.com/developers/api/static/#overlay*/
+#cusco_circular_zoomedout {
+  width: 300px;
+  height: 300px;
+  margin: 15px;
+  margin-right: 100px;
+  float: right;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  background: url("http://api.tiles.mapbox.com/v4/mapbox.dark/pin-m-star+256(-71.85,-13.53)/-55.85,-10.53,3/500x300.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ") no-repeat;
+  box-shadow: 0px 0px 40px 0px #585858;
+  }
+
+#changedetection {
+  margin: 15px;
+  margin-right: 100px;
+  float: right;
+}
+
+/*inline-block keeps bottom div from floating up: http://stackoverflow.com/questions/7759837/put-divs-below-floatleft-divs*/
+.top_panel {
+  margin-bottom: 20px;
+  display:inline-block;
+}
+
+#mainbody {
+  margin: 0 auto;
+}
+
+.tabdiv {
+  margin: 0px 0px 100px 0px;
 }

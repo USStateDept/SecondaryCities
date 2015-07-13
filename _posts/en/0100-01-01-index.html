@@ -1,0 +1,99 @@
+---
+published: true
+layout: default
+permalink: /
+title: 'home'
+slideshow: 
+  - slide: "frontpage-cusco.png"
+    title: Creating Data
+    subtitle: "Building partnerships to create geospatial data on secondary cities"
+  - slide: "frontpage-cusco2.png"
+    title: Resilience
+    subtitle: "Building local capacity in geospatial science-based decision making to enhance resilience"
+  - slide: "frontpage-cusco3.png"
+    title: "Emergency preparedness"
+    subtitle: "Enhancing understanding of secondary cities through data and mapping to better prepare for and respond to emergencies"
+---
+
+<!--need a comment here for page to display correctly-->
+
+<div class='section dark'>
+  <div class='limiter'>
+    <div id='tagline' class='centered'>
+      <p id='mission_statement'>Mapping Secondary Cities for Resiliency, Human Security, and Emergency Preparedness is the flagship, field-based initiative of the Office of the Geographer.</p>
+    </div>
+    <div id='taglist'>
+          <ul style="list-style-type:disc">
+              <li>
+                  Building partnerships to create geospatial data on secondary cities
+              </li>
+              <li>
+                  Enhancing understanding of secondary cities through data and mapping
+              </li>
+              <li>
+                  Building local capacity in geospatial science-based decision making
+              </li>
+              <li>
+                  Providing open geospatial data solutions
+              </li>
+              <li>
+                  Facilitating long-term secondary city partnerships and networks
+              </li>
+          </ul>
+    </div>
+    <h4 class='title centered'>Select Case Studies<br /> <span class='subtitle'>Discover innovative examples of open data and community empowerment</span></h4>
+    <ul class='activities grid clearfix'>
+      {% for case in site.categories.casestudy%}
+        {% if page.lang == case.lang %}
+          {% for tag in case.tags %}
+            {% if tag == 'splash' %}
+              <li>
+                <!--<a href='{{site.baseurl}}{{case.url}}' style='background-image:url("http://api.tiles.mapbox.com/v3/{{case.map}}/{{case.center[0].lon}},{{case.center[0].lat}},{{case.center[0].zoom}}/640x300.png");'>-->
+                <a href='{{site.baseurl}}{{case.url}}' style='background-image:url("http://api.tiles.mapbox.com/v4/hiu.c41pds4i/-72.5,-14.548,7/640x300.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ");'>
+                  <div class='overlay'></div>
+                  <div class='label'>
+                    {% for name in site.categories.cities %}
+                      {% if name.city == case.city %}
+                        <!--{{name.title}}-->
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                  <h4 class='case-title'>{{case.title}}, {{case.country}}</h4>
+                  <p class='city-desc'>{{case.subtitle | truncate:120}}</p>
+                  <span class='more'>More</span>
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+  </div>
+</div>
+
+<div class='section data-coverage'>
+  <!--<h4 class='title centered'>Secondary Cities</h4>-->
+  <img class='map-title' width='400px' src='{{site.baseurl}}/img/SecondaryCitiesType-white.png'>
+  <div class='map' id='map'>
+    <small class='attribution'>Map visualizes the locations of Secondary Cities.</small>
+  </div>
+</div>
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ';
+var map = L.mapbox.map('map', 'hiu.TestMe2', {
+  zoomControl: false
+}).setView([30, 10], 3);
+
+//https://www.mapbox.com/mapbox.js/example/v1.0.0/disable-zooming-panning/
+// Disable drag and zoom handlers.
+map.dragging.disable();
+map.touchZoom.disable();
+map.doubleClickZoom.disable();
+map.scrollWheelZoom.disable();
+
+// Disable tap handler, if present.
+if (map.tap) map.tap.disable();
+
+</script>

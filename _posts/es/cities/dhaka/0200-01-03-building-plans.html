@@ -1,0 +1,34 @@
+---
+layout: interactive
+category: casestudy
+city: 'dhaka'
+title: 'Building Plans'
+subtitle: 'GFDRR Survey database, including building plans and photos'
+preview: 'dhaka.png'
+map: 'gfdrr.map-nkb1ordy,gfdrr.dhaka-building-plans'
+center: 
+  - lat: 23.72550
+    lon: 90.38007
+    zoom: 17
+tags:
+- dhaka
+- featured
+---
+
+The structural survey conducted by the Comprehensive Disaster Management Program in Dhaka includes blueprint plans showing building design and construction. Such information could assist both government officials and the public in verifying that structures were built according to the original plans certified by the Rajdhani Unnayan Kartripakkha (RAJUK), the Capital Development Authority of Bangladesh.
+
+<script>
+var opts = {
+  lat: {{ page.center[0].lat }},
+  lon: {{ page.center[0].lon }},
+  zoom: {
+    defaultZoom:{{ page.center[0].zoom }},
+    max:18,
+    min:13
+    }
+  };
+
+$(function() {
+  gfdrr.generateMap('{{page.map}}', opts);
+});
+</script>

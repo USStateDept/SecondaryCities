@@ -1,2 +1,31 @@
 #baseurl: /SecondaryCities
 permalink: /:categories/:title
+
+defaults:
+  -
+    scope:
+      path: _posts/en
+    values:
+      lang: "English"
+
+  -
+    scope:
+      path: _posts/es
+    values:
+      lang: "Español"
+
+t:
+  English:
+    home: "index"
+    home_link: ""
+    about:  "About"
+    about_link: "about"
+    lang: ''
+  Español:
+    home: "indice"
+    home_link: "indice"
+    about:  "Sobre"
+    about_link:  "sobre"
+    lang: es
+
+

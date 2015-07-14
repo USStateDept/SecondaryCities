@@ -1640,3 +1640,10 @@ display:inline;
 .restore_wrap {
   white-space: normal;
 }
+
+#capstone_neighborhoods {
+  margin: 15px;
+  margin-right: 100px;
+  float: right;
+  text-align: center
+}

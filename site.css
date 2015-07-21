@@ -1629,8 +1629,13 @@ display:inline;
 .promo-box a{
   color:white;
 }
-.promo-box ul{list-style-type:none;margin:0;padding:0;}
-.promo-box li{border-top:1px dotted #E8E9B4;line-height:1em;padding:.5em 0;}
+.promo-box ul{
+  list-style-type:none;
+  margin-left: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.promo-box li{border-bottom:1px dotted #E8E9B4;line-height:1em;padding:.5em 0;}
 
 .indent {
   margin:1em;
@@ -1646,4 +1651,13 @@ display:inline;
   margin-right: 100px;
   float: right;
   text-align: center
+}
+
+.grey_link {
+  color: inherit;
+}
+
+.grey_link:hover {
+  color: inherit;
+  font-weight: bold;
 }

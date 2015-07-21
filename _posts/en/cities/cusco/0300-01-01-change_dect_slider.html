@@ -30,6 +30,20 @@ title: cusco change detection
 			margin: 0 0 5px;
 			color: #d73f3f;
 		}
+
+    .legend {
+      text-align: left;
+      line-height: 18px;
+      color: #555;
+    }
+    .legend i {
+      width: 18px;
+      height: 18px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.7;
+    }
+
 		/*overides leaflet control layer order so it doesn't appear on top of nav bar*/
 		.leaflet-top, .leaflet-bottom {
 			z-index: 1;
@@ -130,9 +144,9 @@ input[type=range]::-ms-thumb {
   cursor: pointer;
 }
 
-.leaflet-top .leaflet-control-zoom {
-  top:20px;
-  }
+.leaflet-top .leaflet-control {
+  margin-top: 30px;
+}
 
 </style>
 
@@ -211,6 +225,34 @@ map.setView([-13.53,-71.85],14);
 		};
 
 		bottom_right_text.addTo(map);
+
+    var legend = L.control({position: 'topright'});
+
+    legend.onAdd = function (map) {
+
+
+      var div = L.DomUtil.create('div', 'info legend'),
+        labels = [],
+        from, to;
+
+        labels.push(
+          '<i style="background:' + '#E600A9' + '"></i> ' +
+          'urban');
+
+        labels.push(
+          '<i style="background:' + '#73B273' + '"></i> ' +
+          'forest');
+
+        labels.push(
+          '<i style="background:' + '#895A44' + '"></i> ' +
+          'bare terrain');
+      
+
+      div.innerHTML = labels.join('<br>');
+      return div;
+    };
+
+    legend.addTo(map);
 
 clip();
 </script>

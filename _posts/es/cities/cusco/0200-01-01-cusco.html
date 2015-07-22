@@ -5,14 +5,6 @@ city: 'cusco'
 country: 'Peru'
 id: 'cusco'
 subtitle: 'Emerging Partnerships'
-preview: 'kathmandu.png'
-map: 'gfdrr.map-dks4ih6b,gfdrr.kathmandu-schools'
-shapefile_date: 'October 15th 2013'
-overpass_link: 'http://overpass-api.de/api/interpreter?data=%28way%5B%22amenity%22%7E%22college%7Ckindergarten%7Cschool%7Cuniversity%22%5D%2827%2E3%2C84%2E6%2C28%2E3%2C86%29%3B%3E%3Bway%5B%22building%22%7E%22college%7Ckindergarten%7Cschool%7Cuniversity%22%5D%2827%2E3%2C84%2E6%2C28%2E3%2C86%29%3B%3E%3B%29%3Bout%20body%3B%0A'
-center:
-  - lat: -13.59
-    lon: -71.95
-    zoom: 11
 tags:
 - cusco
 - featured
@@ -21,126 +13,264 @@ tags:
 
 <div class='limiter2'>
 
-    <div class='title-block2'>
-      <h2>
-        {{page.title}}
-        {% if page.subtitle %}
-          <span class='subtitle'>{{page.subtitle}}</span>
-        {% endif %}
-      </h2>
-    </div>
-
 </div>
 
 <div class='bodylimiter'>
 
-    <section class="top_panel">
+  <div class='title-block2' id="summary">
+    <h2>
+      {{page.title}}
+      {% if page.subtitle %}
+        <span class='subtitle'>{{page.subtitle}}</span>
+      {% endif %}
+    </h2>
+  </div>
 
-          <div class='title-block-text'>
-                <div class='prose'>Nestled high in the Andes Mountains in southeastern Peru, Cusco is rich with history. Cusco was the historic capital of the Inca Empire from the 13th to the 16th century and is declared a World Heritage Site by UNESCO. As the location of the Secondary Cities Pilot project, the proposal is to build local capacity in geospatial science through a long-term engagement in the community. Cusco is a dynamic environment facing risks including flooding and landslides. Secondary Cities is promoting geospatial technologies and map making to address essential planning issues through partnering with the National University of Saint Anthony the Abbot of Cusco, the Office of the Geographer, the US Embassy, and ESRI.
-                </div>
+  <div class="row">
+
+    <div class="col-md-9">
+
+        <div class='prose'>
+          <p>The Cusco Secondary Cities project is a comprehensive geospatial approach to data collection and generation for emergency preparedness and urban sustainability. The goal of this project is to link geospatial tools, expertise, and applications that address critical humanitarian needs for long-term planning and development.<p>
+        </div>
+
+        <br>
+        <section class='section snapshot' style="background: url('{{site.baseurl}}/img/WebsiteBackgroundMap-1200w.png') no-repeat">
+
+          <!--<div class="static_map"  id="cusco_circular_zoomedout"></div>-->
+          <div class="static_map" id="cusco_circular_zoomedout"  style="background: url('{{site.baseurl}}/img/SouthAmericaZoomedOut-300w.png') no-repeat"></div>
+
+          <!--<div class="static_map" id="cusco_circular_zoomedin"></div>-->
+          <div class="static_map" id="cusco_circular_zoomedin"  style="background: url('{{site.baseurl}}/img/CuscoZoomedIn-300w.png') no-repeat"></div>
+        </section>
+        <br>
+
+        <h2 id="workshop">Workshop:  June 29 – July 3</h2>
+        <section>
+          <div class='prose'>
+          <p>  
+          The 5-day workshop launched the Office of the Geographer’s Secondary Cities project to map critical data in rapidly growing urban regions of the world.  Cusco, Peru was selected for the initial project to create a demonstration focusing on data generation of human geography themes for emergency preparedness, security, and resilience.  The goal of this workshop was to teach spatial thinking by exploring geospatial science through the integration of multiple geospatial tools.  Students learned basic skills for field-based data generation, management and sharing as well as the fundamentals of generating geospatial data and cartography.
+          <p><p>
+          The workshop included 26 participants:  <a target="_blank" href="http://www.unsaac.edu.pe/">Universidad Nacional de San Antonio Abad del Cusco - UNSAAC</a> (9); <a target="_blank" href="http://www.uap.edu.pe/">Universidad Alas Peruanas -UAP</a> (4); <a target="_blank" href="http://www.regioncusco.gob.pe/">Cusco Regional government</a> (7); the <a target="_blank" href="http://www.minagri.gob.pe/">Ministry of Agriculture</a> (1) and <a target="_blank" href="http://www.indeci.gob.pe/">Instituto Nacional de Defensa Civil del Peru – INDECI</a> (2).  Participants had a broad range of backgrounds, came from numerous disciplines, and had a mix of GIS skills.  University students were partnered with government representatives to share perspectives and experience and to establish teams for the follow up activities of the workshop.
+          <p><p>
+          This was a unique workshop for three reasons:  
+          <ol class='indent'>
+          <li>
+          demonstration and learning of how cutting-edge geospatial tools can be seamlessly integrated 
+          </li>
+          <li>
+          emphasis on hands-on, field-based data generation and analysis of human geography data for emergency preparedness, human security and resilience 
+          </li>
+          <li>
+          long term investment through follow up activities.  
+          </li>
+          </ol>
+          Additionally, the high level of interest of the workshop students fueled a highly interactive session enriched by the diverse backgrounds of the participants, the Ministry of the Environment, Ministry of Agriculture, Cusco Regional Government and University students. The workshop culminated in a team project and presentation demonstrating how the integration of technologies facilitates field data collection, sharing and analysis.  
           </div>
+        </section>
 
+      <h2 id="outcomes">Outcomes</h2>
+      <section>
+        <div class="prose">
+          <ul class="indent restore_wrap">
+            <li>6 field-based projects collecting data on neighborhoods of the National University of Saint Anthony the Abbot of Cusco</li>
+            <li>Preliminary data on thematic human geography data (link to Cusco Geonode)</li>
+            <li>Established teams of university and government representatives</li>
+            <li>Partnership with Office of the Geographer, ESRI, UNSAAC, US Embassy</li>
+            <li><a target="_blank" href="{{ site.baseurl }}/casestudy/cusco/#collaboration">Follow-up activities</a></li>
+          </ul>
+        </div>
+      </section>
 
-        <figure id="changedetection">
-                <a href="{{site.baseurl}}/cusco-change-detection"><img src="{{site.baseurl}}/img/cusco_change_dect.png" style="width:400px"></a>
-                <figcaption>Fig. - detecting change in the built-up area around Cusco from 2000 to 2014</figcaption>
-        </figure>
+      <p>
+      <h2 id="tools">Tools</h2>
+      <section class="prose">
+        Students were introduced to a suite of geospatial tools.  Working with different tools, both industry standards (i.e. ArcGIS) and open source (i.e., OpenStreetMap), workshop participants were provided a broad array of choices.  Additionally they learned about how these tools can be integrated for value-added products and flexible data collection techniques.
+        <br>
+        <br>
+        <table>
+          <tr>
+            <th>Data Generation</th>
+            <th>Data Management</th>
+            <th>Data Sharing</th>
+            <th>Field Data</th>
+            <th>GPS</th>
+          </tr>
+          <tr>
+            <td><a target="_blank" class="grey_link" href="http://www.esri.com/software/arcgis/arcgis-for-desktop">ArcGIS (ArcMap)</a></td>
+            <td><a target="_blank" class="grey_link" href="http://resources.arcgis.com/en/help/main/10.1/index.html#//006m00000001000000">ArcGIS (ArcCatalog)</a></td>
+            <td><a target="_blank" class="grey_link" href="https://www.arcgis.com/home/">ArcGIS OnLine</a></td>
+            <td><a target="_blank" class="grey_link" href="http://survey123.esri.com/#/home">Survey123</a></td>
+            <td><a target="_blank" class="grey_link" href="http://osmand.net">OSMand</a></td>
+          </tr>
+          <tr>
+            <td><a target="_blank" class="grey_link" href="http://survey123.esri.com/#/home">Survey123</a></td>
+            <td><a target="_blank" class="grey_link" href="http://cuscogeonode.state.gov/">Cusco Geonode</a></td>
+            <td><a target="_blank" class="grey_link" href="http://cuscogeonode.state.gov/">Cusco Geonode</a></td>
+            <td><a target="_blank" class="grey_link" href="http://fieldpapers.org">Field Papers</a></td>
+            <td><a target="_blank" class="grey_link" href="https://play.google.com/store/apps/details?id=com.discipleskies.android.polarisnavigation&hl=en">Polaris Navigator</a></td>
+          </tr>
+          <tr>
+            <td><a target="_blank" class="grey_link" href="https://www.openstreetmap.org/">OpenStreetMap</a></td>
+            <td></td>
+            <td><a target="_blank" class="grey_link" href="https://www.openstreetmap.org/">OpenStreetMap</a></td>
+            <td>Android with GPS Apps</td>
+            <td><a target="_blank" class="grey_link" href="http://sites.garmin.com/en-US/etrex/">Garmin eTrex</a></td>
+          </tr>
+          <tr>
+            <td><a target="_blank" class="grey_link" href="https://products.office.com/en-us/excel">Excel spreadsheets</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
 
-    </section>
+      </section>
 
-    <!--<section class='section snapshot' style="background: url('{{site.baseurl}}/img/SouthAmericaZoomedOut.png') no-repeat">-->
+      <h2 id="data">Data</h2>
+      <section class="prose">
 
-    <!--http://stackoverflow.com/questions/28329234/can-i-use-liquid-tags-in-css-to-have-jekyll-use-a-different-background-image-on-->
+        <ul class="indent restore_wrap">
+          <li>Students used multiple data types and formats as well as generating their own data.  Working with UN population data, students learned the nuances of working with attribute data, understanding spreadsheets and using simple formulas in Excel, joining tables in ArcMap, and symbolizing data for visualization.  </li>
+          <li>Students were introduced to the fundamentals of remote sensing and used high resolution satellite imagery to collect data for emergency preparedness and urban sustainability.  Students used <a target="_blank" href="http://landsat.usgs.gov/">Landsat imagery</a> to assess land use patterns.</li>
+          <li>Students developed field data collection skills through using smartphones with GPS apps and <a target="_blank" href="http://survey123.esri.com/">Survey123</a>.  After creating a survey form using XLSform specification, students used Survey123 mobile app to collect data.  Using both smartphones with GPS apps and hand-held GPS units, students could compare results and assess the different tools.</li>
+        </ul>
 
-    <section class='section snapshot' style="background: url('{{site.baseurl}}/img/WebsiteBackgroundMap-1200w.png') no-repeat">
+        <strong>Data Sharing</strong>
+        Essential to data for emergency preparedness are strategies for sharing these data.  Students were introduced to the <a target="_blank" href="http://cuscogeonode.state.gov/">Cusco Geonode</a> where data are discoverable and can be shared amongst multiple users.  Additionally, students learned about the metadata capabilities of Geonode and the importance of following proper protocols and practices for good metadata that enhances sharing and discoverability.
 
+      </section>
 
+      <h2 id="capstone">Capstone Project</h2>
+      <section class="prose">
+        Using an earthquake as the scenario, students were tasked with collecting thematic data needed for emergency preparedness.  The exercise was situated in the University area, focusing on the adjacent neighborhoods.  Working in teams and assigned a specific neighborhood, students used their newly acquired field data collection skills to collect data on at least two <a target="_blank" href="{{site.baseurl}}/img/hg_themes_en.png">human geography themes</a>.  The scenario for the project was to respond to an earthquake event by collecting thematic data needed for emergency preparedness based on human geography themes.
+        <!--https://css-tricks.com/snippets/css/clear-fix/-->
+        <div class="clearfix">
+          <figure id="capstone_neighborhoods">
+                  <img src="{{site.baseurl}}/img/capstone_neighborhoods.png" style="width:700px">
+                  <figcaption>Fig. - map of neighborhoods</figcaption>
+          </figure>
+        </div>
+      </section>
+      <!--end of top_panel section
+      </section>-->
 
-        <!--<div class="static_map"  id="cusco_circular_zoomedout"></div>-->
-        <div class="static_map" id="cusco_circular_zoomedout"  style="background: url('{{site.baseurl}}/img/SouthAmericaZoomedOut-300w.png') no-repeat"></div>
+      <div class='tabdiv' id="materials">
+        <div>
+            <h2>Materials</h2>
+            </br>
+        </div>
 
-        <!--<div class="static_map" id="cusco_circular_zoomedin"></div>-->
-        <div class="static_map" id="cusco_circular_zoomedin"  style="background: url('{{site.baseurl}}/img/CuscoZoomedIn-300w.png') no-repeat"></div>
+        <ul class="nav nav-tabs">
+          <li class="active"><a target="_blank" data-toggle="tab" href="#home">Introduction to GIS</a></li>
+          <li><a target="_blank" data-toggle="tab" href="#menu1">Creating new data</a></li>
+          <li><a target="_blank" data-toggle="tab" href="#menu2">Field data collection</a></li>
+          <li><a target="_blank" data-toggle="tab" href="#menu3">Remote Sensing using Satellite Imagery</a></li>
+          <li><a target="_blank" data-toggle="tab" href="#menu4">Data Sharing</a></li>
+          <!--<li><a target="_blank" data-toggle="tab" href="#menu5">Workshop Project</a></li>-->
+          <li><a target="_blank" data-toggle="tab" href="#menu6">Working in ArcGIS – Additional Tools</a></li>
+          
+        </ul>
 
-    </section>
+        <div class="tab-content">
+          <div id="home" class="tab-pane fade in active">
+            <h3>Introduction to GIS</h3>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day1-intro-to-gis/Ejercicio_Introduccion-a-ArcGIS.pdf">Ejercicio 1: Introduccion a ArcGIS</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day1-intro-to-gis/Que-es-GIS_Lectura.pdf">Que es GIS Lectura</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day1-intro-to-gis/PensamientoEspacial_GIS_Lectura.pdf">Pensamiento Espacial GIS Lectura</a></p>
 
-<!--
-     <div class:'static_map'>
-        <img src='http://api.tiles.mapbox.com/v4/mapbox.streets/-71.96,-13.53,11/500x300.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ'>
-     </div>
--->
+          </div>
+          <div id="menu1" class="tab-pane fade">
+            <h3>Creating new data</h3>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day2-creating-new-data/DibujoaMano_Lectura.pdf">DibujoaMano Lectura</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day2-creating-new-data/Ejercicio2_Pensando-en-Lugares_Transformando-Croquis-a-Data-Digital.pdf">Ejercicio 2</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day2-creating-new-data/SecondCit_Peru_arcgis.xlsx">Secondary Cities Peru dataset</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day2-creating-new-data/participants-sketch-maps/map1.JPG">participant sketch maps: Map 1</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day2-creating-new-data/participants-sketch-maps/map2.JPG">participant sketch maps: Map 2</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day2-creating-new-data/participants-sketch-maps/map3.JPG">participant sketch maps: Map 3</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day2-creating-new-data/participants-sketch-maps/map4.JPG">participant sketch maps: Map 4</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day2-creating-new-data/participants-sketch-maps/map5.JPG">participant sketch maps: Map 5</a></p>
+          </div>
+          <div id="menu2" class="tab-pane fade">
+            <h3>Field data collection</h3>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day3-field-data-collection/Recoleccion-de-Datos-de-Campo_Lectura_INCOMPLETE.pptx">Recoleccion-de-Datos-de-Campo_Lectura</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day3-field-data-collection/Ejercicio3_Recolectar-Data-de-Campo.pdf">Ejercicio 3</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day3-field-data-collection/NextView_License_Eng_Spanish.pdf">NextView License</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day3-field-data-collection/Atlas_FieldPapers_OSM.pdf">Atlas Field Papers: OSM</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day3-field-data-collection/Atlas_FieldPapers_Sat.pdf">Atlas Field Papers: Satellite</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day3-field-data-collection/FieldPapers IMG.JPG">Field Papers printout ejemplo</a></p>
+          </div>
+          <div id="menu3" class="tab-pane fade">
+            <h3>Remote Sensing using Satellite Imagery</h3>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day4-remote-sensing/RemoteSensing&HumanGeography_Lecture.pdf">Remote Sensing & Human Geography Lecture</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day4-remote-sensing/Ejercicio 4a Teledeteccion y la Geografia Humana.pdf">Ejercicio 4a Teledeteccion y la Geografia Humana</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day4-remote-sensing/Ejercicio 4b Deteccion de Cambios.pdf">Ejercicio 4b Deteccion de Cambios</a></p>
+          </div>
+          <div id="menu4" class="tab-pane fade">
+            <h3>Data Sharing</h3>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day5-data-sharing/CuscoGeoNode_Lecture.pdf">CuscoGeoNode Lecture</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/day5-data-sharing/SC_Cusco_Exercise5_ml.pdf">CuscoGeoNode Exercise</a></p>
+          </div>
+          <!--
+          <div id="menu5" class="tab-pane fade">
+            <h3>Workshop Project</h3>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/Atlas_FieldPapers_OSM.pdf">Field Papers Atlas: OSM basemap</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/Atlas_FieldPapers_Sat.pdf">Field Papers Atlas: Satellite basemap</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/Workshop Project.pdf">Field Papers Atlas: OSM basemap --version 2</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/HG_Neighborhood.pptx">Human Geography Neighborhood PowerPoint</a></p>
+          </div>
+        -->
+          <div id="menu6" class="tab-pane fade">
+            <h3>Working in ArcGIS – Additional Tools</h3>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/additional-tools/Additional exercises.pdf">Additional exercises</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/additional-tools/CuscoWorkshopSchedule_28June.pdf">Cusco Workshop Schedule</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/additional-tools/Overview_Workshop_June28.pdf">Workshop Overview</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/additional-tools/13 themes of Human Geography.pdf">The 13 themes of Human Geography</a></p>
+          </div>
+        </div>
+      </div> <!--end of materials section-->
 
-<!--
-    <div class='download_button'>
-      <span class='button toggle'>Download the data</span>
+      <section id="collaboration">
+        <h2>Collaboration</h2>
+        <div class="prose">
+          <ul class="indent restore_wrap">
+            <li>Slack, a messaging applications for teams, will be set up to facilitate communication and tracking of follow up projects and activities.</li>
+            <li>Change detection webinar will be hosted to discuss the exercise and analysis demonstrated in the workshop.</li>
+            <li><a target="_blank" href="http://mapgive.state.gov">MapGive</a> project</li>
+            <li>Discuss and develop data generation projects:  solicit, identify and prioritize data generation project.</li>
+          </ul>
+        </div>
+
+        <div class="clearfix">
+            <figure id="changedetection" >
+                  <a target="_blank" href="{{site.baseurl}}/cusco-change-detection"><img src="{{site.baseurl}}/img/cusco_change_dect.png" style="width:500px"></a>
+                  <figcaption>Fig. - As part of the workshop remote sensing lesson, students used Landsat 7 and Landsat 8 imagery to assess change detection in Cusco from 2000 to 2014.  Using Image Analysis in ESRI’s ArcGIS software package, student undertook a change detection analysis.</figcaption>
+            </figure>
+          </div>
+      </section>
+
+    <br><br>
+
+    <!--end of col9-->
     </div>
 
-<div class='map-containment2'>
-  <div id='map' class='map'></div>
-</div>
--->
+    <div class="col-md-offset-1 col-md-2">
+      
+    {% if page.lang == 'English' %}
+      {% include more-info-en.html %}
+    {% elsif page.lang == 'Español' %}
+      {% include more-info-es.html %}
+    {% endif %}
 
-<!--http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_menu_list-inline&stacked=h-->
+    </div>
 
-  <div class='tabdiv'>
-      <div>
-          </br>
-              <h3>Workshop Instructions</h3>
-          </br>
-      </div>
-
-      <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#home">Day 1</a></li>
-        <li><a data-toggle="tab" href="#menu1">Day 2</a></li>
-        <li><a data-toggle="tab" href="#menu2">Day 3</a></li>
-        <li><a data-toggle="tab" href="#menu3">Day 4</a></li>
-        <li><a data-toggle="tab" href="#menu4">Day 5</a></li>
-        <li><a data-toggle="tab" href="#menu5">Additional Materials</a></li>
-        <li><a data-toggle="tab" href="#menu6">Workshop Project</a></li>
-      </ul>
-
-      <div class="tab-content">
-        <div id="home" class="tab-pane fade in active">
-          <h3>Day 1</h3>
-          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Lab1_ArcGISIntroduction_ml.pdf">Exercise 1</a></p>
-        </div>
-        <div id="menu1" class="tab-pane fade">
-          <h3>Day 2</h3>
-          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Peru_Cusco_Exercise2_2015_ver2.pdf">Exercise 2</a></p>
-        </div>
-        <div id="menu2" class="tab-pane fade">
-          <h3>Day 3</h3>
-          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Exercise3_2015_ml.pdf">Exercise 3</a></p>
-        </div>
-        <div id="menu3" class="tab-pane fade">
-          <h3>Day 4</h3>
-          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Exercise 4ab_ml.pdf">Exercise 4</a></p>
-        </div>
-        <div id="menu4" class="tab-pane fade">
-          <h3>Day 5</h3>
-          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/SC_Cusco_Exercise5_ml.pdf">Exercise 5</a></p>
-        </div>
-        <div id="menu5" class="tab-pane fade">
-          <h3>Additional Materials</h3>
-          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Additional exercises.pdf">Additional exercises</a></p>
-          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Spatial Thinking.pdf">Spatial Thinking</a></p>
-          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/The 13 themes of Human Geography.pdf">The 13 themes of Human Geography</a></p>
-        </div>
-        <div id="menu6" class="tab-pane fade">
-          <h3>Workshop Project</h3>
-          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Atlas_FieldPapers_OSM.pdf">Field Papers Atlas: OSM basemap</a></p>
-          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Atlas_FieldPapers_Sat.pdf">Field Papers Atlas: Satellite basemap</a></p>
-          <p><a href="{{site.baseurl}}/workshop-materials/en/cusco/Workshop Project.pdf">Field Papers Atlas: OSM basemap --version 2</a></p>
-        </div>
-      </div>
-
-  </div>                                                
+    <!--end of row-->
+    </div>
 
 </div>
 
 </body>
 </html>
-
 
 

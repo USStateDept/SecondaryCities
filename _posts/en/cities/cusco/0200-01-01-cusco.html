@@ -5,14 +5,6 @@ city: 'cusco'
 country: 'Peru'
 id: 'cusco'
 subtitle: 'Emerging Partnerships'
-preview: 'kathmandu.png'
-map: 'gfdrr.map-dks4ih6b,gfdrr.kathmandu-schools'
-shapefile_date: 'October 15th 2013'
-overpass_link: 'http://overpass-api.de/api/interpreter?data=%28way%5B%22amenity%22%7E%22college%7Ckindergarten%7Cschool%7Cuniversity%22%5D%2827%2E3%2C84%2E6%2C28%2E3%2C86%29%3B%3E%3Bway%5B%22building%22%7E%22college%7Ckindergarten%7Cschool%7Cuniversity%22%5D%2827%2E3%2C84%2E6%2C28%2E3%2C86%29%3B%3E%3B%29%3Bout%20body%3B%0A'
-center:
-  - lat: -13.59
-    lon: -71.95
-    zoom: 11
 tags:
 - cusco
 - featured
@@ -87,18 +79,15 @@ tags:
             <li>Partnership with Office of the Geographer, ESRI, UNSAAC, US Embassy</li>
             <li><a target="_blank" href="{{ site.baseurl }}/casestudy/cusco/#collaboration">Follow-up activities</a></li>
           </ul>
-
         </div>
       </section>
 
       <p>
       <h2 id="tools">Tools</h2>
       <section class="prose">
-
         Students were introduced to a suite of geospatial tools.  Working with different tools, both industry standards (i.e. ArcGIS) and open source (i.e., OpenStreetMap), workshop participants were provided a broad array of choices.  Additionally they learned about how these tools can be integrated for value-added products and flexible data collection techniques.
         <br>
         <br>
-
         <table>
           <tr>
             <th>Data Generation</th>
@@ -159,8 +148,20 @@ tags:
         <!--https://css-tricks.com/snippets/css/clear-fix/-->
         <div class="clearfix">
           <figure id="capstone_neighborhoods">
-                  <img src="{{site.baseurl}}/img/capstone_neighborhoods.png" style="width:700px">
+                  <!--<img src="{{site.baseurl}}/img/capstone_neighborhoods.png" style="width:700px">-->
+                  <img src="{{site.baseurl}}/img/capstone_neighborhoods.png" alt="neighborhoods" usemap="#Map"/>
                   <figcaption>Fig. - map of neighborhoods</figcaption>
+                  <map name="Map" id="Map">
+                      <!--used https://developer.cdn.mozilla.net/media/uploads/demos/s/u/summerstyle/365ccfd644f2b008c33f0046d2ba1a8f/summer-html-image-ma_1355318513_demo_package/index.html to create areas -->
+                      <area alt="groupo1" title="" href="https://en.wikipedia.org/wiki/1_(number)" shape="poly" coords="147, 155, 154, 117, 165, 117, 190, 99, 198, 102, 229, 62, 247, 58, 247, 49, 263, 50, 267, 41, 271, 8, 353, 55, 342, 73, 346, 76, 343, 83, 326, 77, 326, 113, 331, 126, 302, 151, 283, 142, 246, 160, 238, 175" />
+                      <area alt="groupo2" title="" href="https://en.wikipedia.org/wiki/2_(number)" shape="poly" coords="352, 57, 366, 59, 418, 94, 433, 121, 423, 144, 410, 145, 388, 175, 379, 210, 217, 184, 216, 172, 237, 177, 249, 160, 286, 144, 303, 153, 332, 126, 327, 112, 327, 78, 341, 86, 349, 77, 343, 71" />
+                      <area alt="groupo3" title="" href="https://en.wikipedia.org/wiki/3_(number)" shape="poly" coords="461, 103, 466, 120, 564, 252, 379, 210, 388, 172, 412, 147, 426, 147, 434, 124, 425, 98, 442, 86" />
+                      <area alt="groupo4" title="" href="https://en.wikipedia.org/wiki/4_(number)" shape="poly" coords="405, 221, 508, 241, 499, 304, 506, 309, 506, 324, 390, 287" />
+                      <area alt="USAAC" title="" href="http://finance.yahoo.com/news/50-cent-testifies-lifestyle-just-210440846.html" shape="poly" coords="344, 207, 402, 222, 388, 286, 326, 268" />
+                      <area alt="groupo5" title="" href="https://en.wikipedia.org/wiki/5_(number)" shape="poly" coords="148, 221, 257, 255, 251, 273, 251, 300, 141, 257, 113, 257, 134, 225" />
+                      <area alt="groupo6" title="" href="https://en.wikipedia.org/wiki/6_(number)" shape="poly" coords="259, 256, 397, 295, 395, 330, 405, 349, 401, 367, 253, 300, 251, 272" />
+
+                  </map>
           </figure>
         </div>
       </section>
@@ -179,7 +180,7 @@ tags:
           <li><a target="_blank" data-toggle="tab" href="#menu2">Field data collection</a></li>
           <li><a target="_blank" data-toggle="tab" href="#menu3">Remote Sensing using Satellite Imagery</a></li>
           <li><a target="_blank" data-toggle="tab" href="#menu4">Data Sharing</a></li>
-          <li><a target="_blank" data-toggle="tab" href="#menu5">Workshop Project</a></li>
+          <!--<li><a target="_blank" data-toggle="tab" href="#menu5">Workshop Project</a></li>-->
           <li><a target="_blank" data-toggle="tab" href="#menu6">Working in ArcGIS – Additional Tools</a></li>
           
         </ul>
@@ -187,24 +188,43 @@ tags:
         <div class="tab-content">
           <div id="home" class="tab-pane fade in active">
             <h3>Introduction to GIS</h3>
-            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/Lab1_ArcGISIntroduction_ml.pdf">Exercise 1</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day1-intro-to-gis/Exercise1_Introduction-to-ArcGIS.pdf">Exercise 1: Introduction to ArcGIS</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day1-intro-to-gis/WhatIsGIS_Lecture.pdf">What is GIS Lecture</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day1-intro-to-gis/SpatialThinking_GIS_Lecture.pdf">Spatial Thinking GIS Lecture</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day1-intro-to-gis/WUP2014-F22-Cities_Over_300K_Annual.xls">Cities_Over_300K_Annual dataset</a></p>
           </div>
           <div id="menu1" class="tab-pane fade">
             <h3>Creating new data</h3>
-            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/Peru_Cusco_Exercise2_2015_ver2.pdf">Exercise 2</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day2-creating-new-data/SketchMapping_Lecture.pdf">Sketch Mapping Lecture</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day2-creating-new-data/Peru_Cusco_Exercise2_2015_ver2.pdf">Exercise 2</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day2-creating-new-data/SecondCit_Peru_arcgis.xlsx">Secondary Cities Peru dataset</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day2-creating-new-data/participants-sketch-maps/map1.JPG">participant sketch maps: Map 1</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day2-creating-new-data/participants-sketch-maps/map2.JPG">participant sketch maps: Map 2</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day2-creating-new-data/participants-sketch-maps/map3.JPG">participant sketch maps: Map 3</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day2-creating-new-data/participants-sketch-maps/map4.JPG">participant sketch maps: Map 4</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day2-creating-new-data/participants-sketch-maps/map5.JPG">participant sketch maps: Map 5</a></p>
           </div>
           <div id="menu2" class="tab-pane fade">
             <h3>Field data collection</h3>
-            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/Exercise3_2015_ml.pdf">Exercise 3</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day3-field-data-collection/FieldDataCollection_Lecture.pdf">Field Data Collection Lecture</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day3-field-data-collection/Exercise3_CollectingFieldData.pdf">Exercise 3</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day3-field-data-collection/NextView_License_Eng_Spanish.pdf">NextView License</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day3-field-data-collection/Atlas_FieldPapers_OSM.pdf">Atlas Field Papers: OSM</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day3-field-data-collection/Atlas_FieldPapers_Sat.pdf">Atlas Field Papers: Satellite</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day3-field-data-collection/FieldPapers IMG.JPG">Field Papers printout example</a></p>
           </div>
           <div id="menu3" class="tab-pane fade">
             <h3>Remote Sensing using Satellite Imagery</h3>
-            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/Exercise 4ab_ml.pdf">Exercise 4</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day4-remote-sensing/RemoteSensing&HumanGeography_Lecture.pdf">Remote Sensing & Human Geography Lecture</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day4-remote-sensing/Exercise 4a Remote Sensing & Human Geography.pdf">Exercise 4a Remote Sensing & Human Geography</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day4-remote-sensing/Exercise 4b Change Detection.pdf">Exercise 4b Change Detection</a></p>
           </div>
           <div id="menu4" class="tab-pane fade">
             <h3>Data Sharing</h3>
-            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/SC_Cusco_Exercise5_ml.pdf">Exercise 5</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day5-data-sharing/CuscoGeoNode_Lecture.pdf">CuscoGeoNode Lecture</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day5-data-sharing/SC_Cusco_Exercise5_ml.pdf">CuscoGeoNode Exercise</a></p>
           </div>
+          <!--
           <div id="menu5" class="tab-pane fade">
             <h3>Workshop Project</h3>
             <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/Atlas_FieldPapers_OSM.pdf">Field Papers Atlas: OSM basemap</a></p>
@@ -212,11 +232,13 @@ tags:
             <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/Workshop Project.pdf">Field Papers Atlas: OSM basemap --version 2</a></p>
             <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/HG_Neighborhood.pptx">Human Geography Neighborhood PowerPoint</a></p>
           </div>
+        -->
           <div id="menu6" class="tab-pane fade">
             <h3>Working in ArcGIS – Additional Tools</h3>
-            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/Additional exercises.pdf">Additional exercises</a></p>
-            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/Spatial Thinking.pdf">Spatial Thinking</a></p>
-            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/The 13 themes of Human Geography.pdf">The 13 themes of Human Geography</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/additional-tools/Additional exercises.pdf">Additional exercises</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/additional-tools/CuscoWorkshopSchedule_28June.pdf">Cusco Workshop Schedule</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/additional-tools/Overview_Workshop_June28.pdf">Workshop Overview</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/additional-tools/13 themes of Human Geography.pdf">The 13 themes of Human Geography</a></p>
           </div>
         </div>
       </div> <!--end of materials section-->
@@ -246,31 +268,18 @@ tags:
     </div>
 
     <div class="col-md-offset-1 col-md-2">
-      {% include more-info.html %}
+      
+    {% if page.lang == 'English' %}
+      {% include more-info-en.html %}
+    {% elsif page.lang == 'Español' %}
+      {% include more-info-es.html %}
+    {% endif %}
+
     </div>
 
     <!--end of row-->
     </div>
 
-    <!--<section class='section snapshot' style="background: url('{{site.baseurl}}/img/SouthAmericaZoomedOut.png') no-repeat">-->
-
-    <!--http://stackoverflow.com/questions/28329234/can-i-use-liquid-tags-in-css-to-have-jekyll-use-a-different-background-image-on-->
-<!--
-     <div class:'static_map'>
-        <img src='http://api.tiles.mapbox.com/v4/mapbox.streets/-71.96,-13.53,11/500x300.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ'>
-     </div>
--->
-<!--
-    <div class='download_button'>
-      <span class='button toggle'>Download the data</span>
-    </div>
-<div class='map-containment2'>
-  <div id='map' class='map'></div>
-</div>
--->
-<!--http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_menu_list-inline&stacked=h-->
-
-<!--end body limiter div?-->
 </div>
 
 </body>

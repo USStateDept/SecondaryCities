@@ -149,19 +149,58 @@ tags:
         <div class="clearfix">
           <figure id="capstone_neighborhoods">
                   <!--<img src="{{site.baseurl}}/img/capstone_neighborhoods.png" style="width:700px">-->
-                  <img src="{{site.baseurl}}/img/capstone_neighborhoods.png" alt="neighborhoods" usemap="#Map"/>
+                  <div style='position:relative'>
+                    <img src="{{site.baseurl}}/img/capstone_neighborhoods.png" alt="neighborhoods"  style='position:relative; z-index:0;'/>
+                    <canvas id='myCanvas' height='390' width='700' style='position:absolute; top:0px; left:0px;'>Canvas is not supported by your browser.</canvas>
+                    <!--invisible img map (before added this line; img needed to be on top to get coords, but then needed to be on bottom or have low opacity to see the canvas polygons that get drawn-->
+                    <img border="0" usemap="#Map" style='position:absolute; top:0px; left:0px; width:100%; height:100%; ' usemap="#imgmap" />
+                  </div>
                   <figcaption>Fig. - map of neighborhoods</figcaption>
                   <map name="Map" id="Map">
                       <!--used https://developer.cdn.mozilla.net/media/uploads/demos/s/u/summerstyle/365ccfd644f2b008c33f0046d2ba1a8f/summer-html-image-ma_1355318513_demo_package/index.html to create areas -->
-                      <area alt="groupo1" title="" href="https://en.wikipedia.org/wiki/1_(number)" shape="poly" coords="147, 155, 154, 117, 165, 117, 190, 99, 198, 102, 229, 62, 247, 58, 247, 49, 263, 50, 267, 41, 271, 8, 353, 55, 342, 73, 346, 76, 343, 83, 326, 77, 326, 113, 331, 126, 302, 151, 283, 142, 246, 160, 238, 175" />
-                      <area alt="groupo2" title="" href="https://en.wikipedia.org/wiki/2_(number)" shape="poly" coords="352, 57, 366, 59, 418, 94, 433, 121, 423, 144, 410, 145, 388, 175, 379, 210, 217, 184, 216, 172, 237, 177, 249, 160, 286, 144, 303, 153, 332, 126, 327, 112, 327, 78, 341, 86, 349, 77, 343, 71" />
-                      <area alt="groupo3" title="" href="https://en.wikipedia.org/wiki/3_(number)" shape="poly" coords="461, 103, 466, 120, 564, 252, 379, 210, 388, 172, 412, 147, 426, 147, 434, 124, 425, 98, 442, 86" />
-                      <area alt="groupo4" title="" href="https://en.wikipedia.org/wiki/4_(number)" shape="poly" coords="405, 221, 508, 241, 499, 304, 506, 309, 506, 324, 390, 287" />
-                      <area alt="USAAC" title="" href="http://finance.yahoo.com/news/50-cent-testifies-lifestyle-just-210440846.html" shape="poly" coords="344, 207, 402, 222, 388, 286, 326, 268" />
-                      <area alt="groupo5" title="" href="https://en.wikipedia.org/wiki/5_(number)" shape="poly" coords="148, 221, 257, 255, 251, 273, 251, 300, 141, 257, 113, 257, 134, 225" />
-                      <area alt="groupo6" title="" href="https://en.wikipedia.org/wiki/6_(number)" shape="poly" coords="259, 256, 397, 295, 395, 330, 405, 349, 401, 367, 253, 300, 251, 272" />
+                      <area class="mapPart" alt="groupo1" title="" href="https://en.wikipedia.org/wiki/1_(number)" shape="poly" coords="147, 155, 154, 117, 165, 117, 190, 99, 198, 102, 229, 62, 247, 58, 247, 49, 263, 50, 267, 41, 271, 8, 353, 55, 342, 73, 346, 76, 343, 83, 326, 77, 326, 113, 331, 126, 302, 151, 283, 142, 246, 160, 238, 175" />
+                      <area class="mapPart" alt="groupo2" title="" href="https://en.wikipedia.org/wiki/2_(number)" shape="poly" coords="352, 57, 366, 59, 418, 94, 433, 121, 423, 144, 410, 145, 388, 175, 379, 210, 217, 184, 216, 172, 237, 177, 249, 160, 286, 144, 303, 153, 332, 126, 327, 112, 327, 78, 341, 86, 349, 77, 343, 71" />
+                      <area class="mapPart" alt="groupo3" title="" href="https://en.wikipedia.org/wiki/3_(number)" shape="poly" coords="461, 103, 466, 120, 564, 252, 379, 210, 388, 172, 412, 147, 426, 147, 434, 124, 425, 98, 442, 86" />
+                      <area class="mapPart" alt="groupo4" title="" href="https://en.wikipedia.org/wiki/4_(number)" shape="poly" coords="405, 221, 508, 241, 499, 304, 506, 309, 506, 324, 390, 287" />
+                      <area class="mapPart" alt="USAAC" title="" href="http://finance.yahoo.com/news/50-cent-testifies-lifestyle-just-210440846.html" shape="poly" coords="344, 207, 402, 222, 388, 286, 326, 268" />
+                      <area class="mapPart" alt="groupo5" title="" href="https://en.wikipedia.org/wiki/5_(number)" shape="poly" coords="148, 221, 257, 255, 251, 273, 251, 300, 141, 257, 113, 257, 134, 225" />
+                      <area class="mapPart" alt="groupo6" title="" href="https://en.wikipedia.org/wiki/6_(number)" shape="poly" coords="259, 256, 397, 295, 395, 330, 405, 349, 401, 367, 253, 300, 251, 272" />
 
                   </map>
+                  <script type="text/javascript">
+                      var cv = document.getElementById('myCanvas');
+                      var context = cv.getContext('2d');
+
+                      context.clearRect(0, 0, cv.width, cv.height);
+
+                      $('.mapPart').mouseover(function () {
+                          var coordStr = this.getAttribute('coords');
+                          // draw
+                          drawPolygon(context, coordStr);
+                      });
+
+                      $('.mapPart').mouseout(function () {
+                          // clear
+                          context.clearRect(0, 0, cv.width, cv.height);
+                      });
+
+                      function drawPolygon(hdc, coOrdStr) {
+                          var mCoords = coOrdStr.split(',');
+                          var i, n;
+                          n = mCoords.length;
+
+                          hdc.beginPath();
+                          hdc.moveTo(mCoords[0], mCoords[1]);
+                          for (i = 2; i < n; i += 2) {
+                              hdc.lineTo(mCoords[i], mCoords[i + 1]);
+                          }
+                          hdc.lineTo(mCoords[0], mCoords[1]);
+                          hdc.lineWidth="12";
+                          hdc.strokeStyle="#ff0000"; // red path
+                          hdc.globalAlpha=".4"  // transparency
+                          hdc.stroke();
+}
+                  </script>
           </figure>
         </div>
       </section>

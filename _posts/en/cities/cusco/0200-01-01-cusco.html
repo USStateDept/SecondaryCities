@@ -244,9 +244,23 @@ tags:
                           selContent(altStr, titleStr);
                       });
 
-                      //need to parse this div, get all the alt names, so I can make them all inactive during mouseclick, so I can then only make the one that is clicked active
-                      var mapDiv = document.getElementById("Map").innerHTML;
-                      console.log(mapDiv);
+                      //need to parse this div, get all the alt names, so I can make them all inactive during mouseclick, so I can then only make the one that is clicked active. Probably better to use JQuery for this
+                      var groupoArr = []
+
+                      $( document ).ready(function() {
+                        console.log( 'ready!' );
+
+                        
+                        $('.mapPart').each(function(index,value) {
+                            //console.log(index + ":" + $(this).attr('alt'));
+                            groupoArr.push($(this).attr('alt'));
+                        });
+                        
+                        //console.log(groupoArr);
+
+                      }); //end of JQuery document ready function
+                      
+                      //console.log(groupoArr);
 
                       //draw poly and
                       function drawPolygon(hdc, coOrdStr) {
@@ -270,20 +284,22 @@ tags:
                       function selContent(groupId,projectTitle) {
                         document.getElementById('group-project').innerHTML = "<li><a data-toggle='tab' href=" + groupId + ">" + projectTitle + "</a></li>";
 
-                        console.log("groupId: ")
-                        console.log(groupId)
+                        //console.log("groupId: ")
+                        //console.log(groupId)
 
-
-
+                        for (i = 0; i < groupoArr.length; i++) { 
+                          document.getElementById(groupoArr[i]).className = "tab-pane fade";
+                        }
+                        
                         document.getElementById(groupId).className = "tab-pane fade in active";
                       }
-
                   </script>
-
 
       </section>
       <!--end of top_panel section
       </section>-->
+
+      <br><br>
 
       <div class='tabdiv' id="materials">
         <div>

@@ -28,7 +28,11 @@
 
                 <li>
 
+                <!-- previous line used title to match pages
                 {% assign posts=site.posts | where:"title", page.title | sort: 'path' %}
+                -->
+
+                {% assign posts=site.posts | where:"pageID", page.pageID | sort: 'path' %}
 
                 {% for post in posts %}
                     <span class="lang">

@@ -22,7 +22,23 @@
 
         <li>
 
-        {% assign posts=site.posts | where:"title", page.title | sort: 'path' %}
+        <!--testing 
+
+            test page id: {{ page.pageID }}
+            <br>
+            now pageIDs: 
+            <br>
+
+            {% for post in site.pageID %}
+
+            {{post.id}}
+            <br>
+
+            {% endfor %}
+
+        -->
+
+        {% assign posts=site.posts | where:"pageID", page.pageID | sort: 'path' %}
 
         {% for post in posts %}
             <span class="lang">

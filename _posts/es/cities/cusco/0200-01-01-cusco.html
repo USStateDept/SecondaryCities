@@ -65,7 +65,13 @@ tags:
           long term investment through follow up activities.  
           </li>
           </ol>
-          Additionally, the high level of interest of the workshop students fueled a highly interactive session enriched by the diverse backgrounds of the participants, the Ministry of the Environment, Ministry of Agriculture, Cusco Regional Government and University students. The workshop culminated in a team project and presentation demonstrating how the integration of technologies facilitates field data collection, sharing and analysis.  
+            <div class="clearfix">
+                <!--code for picasa photo album-->
+                <table align="left" style="width:190px;margin-right:40px;"><tr><td align="center" style="height:194px;background:url(https://www.gstatic.com/pwa/s/v/lighthousefe_20150712.00_p0/transparent_album_background.gif) no-repeat left"><a href="https://picasaweb.google.com/105172942388203872264/SecondaryCitiesCuscoPilotWorkshopWebsite?authuser=0&feat=embedwebsite"><img src="https://lh3.googleusercontent.com/-RQvTpUg8zbI/VZx753yml9E/AAAAAAAABBE/rWP4y6j6iwo/s160-c-Ic42/SecondaryCitiesCuscoPilotWorkshopWebsite.jpg" width="190" style="margin:1px 0 0 4px;"></a></td></tr><tr><td style="text-align:center;font-family:arial,sans-serif;font-size:16px"><a href="https://picasaweb.google.com/105172942388203872264/SecondaryCitiesCuscoPilotWorkshopWebsite?authuser=0&feat=embedwebsite" style="color:#4D4D4D;font-weight:bold;text-decoration:none;">Secondary Cities Cusco Pilot Workshop - Photo Album</a></td></tr></table>
+
+                Additionally, the high level of interest of the workshop students fueled a highly interactive session enriched by the diverse backgrounds of the participants, the Ministry of the Environment, Ministry of Agriculture, Cusco Regional Government and University students. The workshop culminated in a team project and presentation demonstrating how the integration of technologies facilitates field data collection, sharing and analysis. 
+
+            </div>
           </div>
         </section>
 
@@ -74,7 +80,7 @@ tags:
         <div class="prose">
           <ul class="indent restore_wrap">
             <li>6 field-based projects collecting data on neighborhoods of the National University of Saint Anthony the Abbot of Cusco</li>
-            <li>Preliminary data on thematic human geography data (link to Cusco Geonode)</li>
+            <li>Preliminary data on <a href="http://cuscogeonode.state.gov/">thematic human geography data</a></li>
             <li>Established teams of university and government representatives</li>
             <li>Partnership with Office of the Geographer, ESRI, UNSAAC, US Embassy</li>
             <li><a target="_blank" href="{{ site.baseurl }}/casestudy/cusco/#collaboration">Follow-up activities</a></li>
@@ -144,17 +150,154 @@ tags:
 
       <h2 id="capstone">Capstone Project</h2>
       <section class="prose">
-        Using an earthquake as the scenario, students were tasked with collecting thematic data needed for emergency preparedness.  The exercise was situated in the University area, focusing on the adjacent neighborhoods.  Working in teams and assigned a specific neighborhood, students used their newly acquired field data collection skills to collect data on at least two <a target="_blank" href="{{site.baseurl}}/img/hg_themes_en.png">human geography themes</a>.  The scenario for the project was to respond to an earthquake event by collecting thematic data needed for emergency preparedness based on human geography themes.
+        Using an earthquake as the scenario, students were tasked with collecting thematic data needed for emergency preparedness.  The exercise was situated in the University area, focusing on the adjacent neighborhoods.  Working in teams and assigned a specific neighborhood, students used their newly acquired field data collection skills to collect data on at least two <a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/additional-tools/13 Themes of Human Geography Spanish.pdf">human geography themes</a>.  The scenario for the project was to respond to an earthquake event by collecting thematic data needed for emergency preparedness based on human geography themes.
         <!--https://css-tricks.com/snippets/css/clear-fix/-->
         <div class="clearfix">
           <figure id="capstone_neighborhoods">
-                  <img src="{{site.baseurl}}/img/capstone_neighborhoods.png" style="width:700px">
+                  <!--<img src="{{site.baseurl}}/img/capstone_neighborhoods.png" style="width:700px">-->
+                  <div style='position:relative'>
+                    <img src="{{site.baseurl}}/img/capstone_neighborhoods.png" alt="neighborhoods"  style='position:relative; z-index:0;'/>
+                    <canvas id='myCanvas' height='390' width='700' style='position:absolute; top:0px; left:0px;'>Canvas is not supported by your browser.</canvas>
+                    <!--invisible img map (before added this line; img needed to be on top to get coords, but then needed to be on bottom or have low opacity to see the canvas polygons that get drawn-->
+                    <img border="0" usemap="#Map" style='position:absolute; top:0px; left:0px; width:100%; height:100%; ' usemap="#imgmap" />
+                  </div>
                   <figcaption>Fig. - map of neighborhoods</figcaption>
+                  <map name="Map" id="Map">
+                      <!--used https://developer.cdn.mozilla.net/media/uploads/demos/s/u/summerstyle/365ccfd644f2b008c33f0046d2ba1a8f/summer-html-image-ma_1355318513_demo_package/index.html to create areas -->
+                      <area class="mapPart" alt="groupo1" title="Groupo 1" shape="poly" coords="147, 155, 154, 117, 165, 117, 190, 99, 198, 102, 229, 62, 247, 58, 247, 49, 263, 50, 267, 41, 271, 8, 353, 55, 342, 73, 346, 76, 343, 83, 326, 77, 326, 113, 331, 126, 302, 151, 283, 142, 246, 160, 238, 175" />
+                      <area class="mapPart" alt="groupo2" title="Groupo 2" shape="poly" coords="352, 57, 366, 59, 418, 94, 433, 121, 423, 144, 410, 145, 388, 175, 379, 210, 217, 184, 216, 172, 237, 177, 249, 160, 286, 144, 303, 153, 332, 126, 327, 112, 327, 78, 341, 86, 349, 77, 343, 71" />
+                      <area class="mapPart" alt="groupo3" title="Groupo 3" shape="poly" coords="461, 103, 466, 120, 564, 252, 379, 210, 388, 172, 412, 147, 426, 147, 434, 124, 425, 98, 442, 86" />
+                      <area class="mapPart" alt="groupo4" title="Groupo 4" shape="poly" coords="405, 221, 508, 241, 499, 304, 506, 309, 506, 324, 390, 287" />
+                      <area class="mapPart" alt="USAAC" title="USAAC" shape="poly" coords="344, 207, 402, 222, 388, 286, 326, 268" />
+                      <area class="mapPart" alt="groupo5" title="Groupo 6" shape="poly" coords="148, 221, 257, 255, 251, 273, 251, 300, 141, 257, 113, 257, 134, 225" />
+                      <area class="mapPart" alt="groupo6" title="Groupo 7" shape="poly" coords="259, 256, 397, 295, 395, 330, 405, 349, 401, 367, 253, 300, 251, 272" />
+
+                  </map>
+                  
           </figure>
+        </div> <!--div contains picture of neighborhoods-->
+
+        <ul id="group-project" class="nav nav-tabs">
+          <!--<li><a data-toggle="tab" href="#menu1">Creating new data</a></li>-->
+        </ul>
+
+        <!--on click need to add class="tab-pane fade in active" to divs-->
+        <div id="group-projects" class="tab-content">
+          <div id="groupo1" class="tab-pane fade">
+            <h2></h2> <!--h2 style is the color white right now-->
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day1-intro-to-gis/Exercise1_Introduction-to-ArcGIS.pdf">PROYECTO TALLER:EVALUACION DE LA RESILIENCIA DEL SECTOR RECOLETA-COLLASUYO</a></p>
+          </div>
+          <div id="groupo2" class="tab-pane fade">
+            <h2></h2>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day1-intro-to-gis/Exercise1_Introduction-to-ArcGIS.pdf">MAPEO DE CIUDADES SECUNDARIAS PARA RESILENCIA Y PREPARACION  DE EMERGENCIAS/a></p>
+          </div>
+          <div id="groupo3" class="tab-pane fade">
+            <h2></h2>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day1-intro-to-gis/Exercise1_Introduction-to-ArcGIS.pdf">IDENTIFICACIÓN DE PUNTOS VULNERABLES EN EDUCACIÓN Y RELIGIÓN</a></p>
+          </div>
+          <div id="groupo4" class="tab-pane fade">
+            <h2></h2>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day1-intro-to-gis/Exercise1_Introduction-to-ArcGIS.pdf">PROYECTO DE GENERACION DE INFORMACION  PARA ANALIZAR LA CAPACIDAD DE RESPUESTA  A UN SISMO</a></p>
+          </div>
+          <div id="groupo5" class="tab-pane fade">
+            <h2></h2>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day1-intro-to-gis/Exercise1_Introduction-to-ArcGIS.pdf">EN CASO DE SISMO</a></p>
+          </div>
+          <div id="groupo6" class="tab-pane fade">
+            <h2></h2>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day1-intro-to-gis/Exercise1_Introduction-to-ArcGIS.pdf">PROYECTO DE GEOGRAFÍA HUMANA: EDUCACIÓN Y SALUD</a></p>
+          </div>
+          <div id="USAAC" class="tab-pane fade">
+            <h2></h2>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/day1-intro-to-gis/Exercise1_Introduction-to-ArcGIS.pdf">USAAC</a></p>
+          </div>
         </div>
+
+        <script type="text/javascript">
+                      var cv = document.getElementById('myCanvas');
+                      var context = cv.getContext('2d');
+
+                      context.clearRect(0, 0, cv.width, cv.height);
+
+                      $('.mapPart').mouseover(function () {
+                          var coordStr = this.getAttribute('coords');
+                          // draw
+                          drawPolygon(context, coordStr);
+                      });
+
+                      $('.mapPart').mouseout(function () {
+                          // clear
+                          context.clearRect(0, 0, cv.width, cv.height);
+                      });
+
+                      $('.mapPart').mousedown(function () {
+                          var altStr = this.getAttribute('alt');
+                          var titleStr = this.getAttribute('title');
+                          selContent(altStr, titleStr);
+                      });
+
+                      $('.mapPart').mouseup(function () {
+                          var altStr = this.getAttribute('alt');
+                          var titleStr = this.getAttribute('title');
+                          selContent(altStr, titleStr);
+                      });
+
+                      //need to parse this div, get all the alt names, so I can make them all inactive during mouseclick, so I can then only make the one that is clicked active. Probably better to use JQuery for this
+                      var groupoArr = []
+
+                      $( document ).ready(function() {
+                        console.log( 'ready!' );
+
+                        
+                        $('.mapPart').each(function(index,value) {
+                            //console.log(index + ":" + $(this).attr('alt'));
+                            groupoArr.push($(this).attr('alt'));
+                        });
+                        
+                        //console.log(groupoArr);
+
+                      }); //end of JQuery document ready function
+                      
+                      //console.log(groupoArr);
+
+                      //draw poly and
+                      function drawPolygon(hdc, coOrdStr) {
+                          var mCoords = coOrdStr.split(',');
+                          var i, n;
+                          n = mCoords.length;
+
+                          hdc.beginPath();
+                          hdc.moveTo(mCoords[0], mCoords[1]);
+                          for (i = 2; i < n; i += 2) {
+                              hdc.lineTo(mCoords[i], mCoords[i + 1]);
+                          }
+                          hdc.lineTo(mCoords[0], mCoords[1]);
+                          hdc.lineWidth="12";
+                          hdc.strokeStyle="#ff0000"; // red path
+                          hdc.globalAlpha=".4"  // transparency
+                          hdc.stroke();
+
+                      }
+                      //select content to display
+                      function selContent(groupId,projectTitle) {
+                        document.getElementById('group-project').innerHTML = "<li><a data-toggle='tab' href=" + groupId + ">" + projectTitle + "</a></li>";
+
+                        //console.log("groupId: ")
+                        //console.log(groupId)
+
+                        for (i = 0; i < groupoArr.length; i++) { 
+                          document.getElementById(groupoArr[i]).className = "tab-pane fade";
+                        }
+                        
+                        document.getElementById(groupId).className = "tab-pane fade in active";
+                      }
+                  </script>
+
       </section>
       <!--end of top_panel section
       </section>-->
+
+      <br><br>
 
       <div class='tabdiv' id="materials">
         <div>
@@ -226,7 +369,7 @@ tags:
             <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/additional-tools/Additional exercises.pdf">Additional exercises</a></p>
             <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/additional-tools/CuscoWorkshopSchedule_28June.pdf">Cusco Workshop Schedule</a></p>
             <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/additional-tools/Overview_Workshop_June28.pdf">Workshop Overview</a></p>
-            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/additional-tools/13 themes of Human Geography.pdf">The 13 themes of Human Geography</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/additional-tools/13 Themes of Human Geography Spanish.pdf">The 13 themes of Human Geography</a></p>
           </div>
         </div>
       </div> <!--end of materials section-->

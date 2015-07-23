@@ -1,9 +1,17 @@
 <div class='footer blue'>
   <div class='centered clearfix'>
     <div id='partners' class='partners'>
+
+      {% if page.lang == 'English' %}
       <h4 class='title'>Partners <br />
         <span class='subtitle'>We are a growing coalition of interested stakeholders.</span>
       </h4>
+    {% elsif page.lang == 'Español' %}
+      <h4 class='title'>Socios <br />
+        <span class='subtitle'>Somos una coalición que esta creciendo</span>
+      </h4>
+    {% endif %}
+
       <div class='partners'>
 <!--
         <a href='//gfdrr.org' class='icon gfdrr'>Global Facility for Disaster Reduction and Recovery</a>

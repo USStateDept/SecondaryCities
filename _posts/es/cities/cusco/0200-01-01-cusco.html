@@ -160,10 +160,10 @@ tags:
                     <img src="{{site.baseurl}}/img/capstone_neighborhoods.png" alt="neighborhoods"  style='position:relative; z-index:0;'/>
                     <canvas id='myCanvas' height='390' width='700' style='position:absolute; top:0px; left:0px;'>Canvas is not supported by your browser.</canvas>
                     <!--invisible img map (before added this line; img needed to be on top to get coords, but then needed to be on bottom or have low opacity to see the canvas polygons that get drawn-->
-                    <img border="0" usemap="#Map" style='position:absolute; top:0px; left:0px; width:100%; height:100%; ' usemap="#imgmap" />
+                    <img border="0" usemap="#imgmap" style="position:absolute; top:0px; left:0px; width:100%; height:100%;"/>
                   </div>
                   <figcaption>Fig. - Mapa de barrios</figcaption>
-                  <map name="Map" id="Map">
+                  <map name="imgmap" id="Map">
                       <!--used https://developer.cdn.mozilla.net/media/uploads/demos/s/u/summerstyle/365ccfd644f2b008c33f0046d2ba1a8f/summer-html-image-ma_1355318513_demo_package/index.html to create areas -->
                       <area class="mapPart" alt="groupo1" title="Groupo 1" shape="poly" coords="147, 155, 154, 117, 165, 117, 190, 99, 198, 102, 229, 62, 247, 58, 247, 49, 263, 50, 267, 41, 271, 8, 353, 55, 342, 73, 346, 76, 343, 83, 326, 77, 326, 113, 331, 126, 302, 151, 283, 142, 246, 160, 238, 175" />
                       <area class="mapPart" alt="groupo2" title="Groupo 2" shape="poly" coords="352, 57, 366, 59, 418, 94, 433, 121, 423, 144, 410, 145, 388, 175, 379, 210, 217, 184, 216, 172, 237, 177, 249, 160, 286, 144, 303, 153, 332, 126, 327, 112, 327, 78, 341, 86, 349, 77, 343, 71" />
@@ -314,6 +314,7 @@ tags:
           <li><a target="_blank" data-toggle="tab" href="#menu4">Intercambio de datos </a></li>
           <!--<li><a target="_blank" data-toggle="tab" href="#menu5">Workshop Project</a></li>-->
           <li><a target="_blank" data-toggle="tab" href="#menu6">Trabajando en ArcGIS – herramientas adicionales</a></li>
+          <li><a target="_blank" data-toggle="tab" href="#menu7">Folletes</a></li>
           
         </ul>
 
@@ -371,6 +372,14 @@ tags:
             <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/additional-tools/CuscoWorkshopSchedule_28June.pdf">Cusco Workshop Schedule</a></p>
             <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/en/cusco/additional-tools/Overview_Workshop_June28.pdf">Workshop Overview</a></p>
             <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/additional-tools/13 Themes of Human Geography Spanish.pdf">The 13 themes of Human Geography</a></p>
+          </div>
+          <div id="menu7" class="tab-pane fade">
+            <h3>1-pagers</h3>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/1pagers/field_papers.docx">Field papers</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/1pagers/geonode_1pager.docx">Geonode 1-pager</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/1pagers/huawei_g6_ascend_for_geospatial_apps.docx">configuración de Huawei smartphone</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/1pagers/joins_and_relates.docx">Joins and Relates</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/1pagers/survey123.docx">Survey 1 pager</a></p>
           </div>
         </div>
       </div> <!--end of materials section-->

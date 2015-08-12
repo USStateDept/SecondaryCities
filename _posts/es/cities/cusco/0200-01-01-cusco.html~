@@ -374,12 +374,12 @@ tags:
             <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/es/cusco/additional-tools/13 Themes of Human Geography Spanish.pdf">The 13 themes of Human Geography</a></p>
           </div>
           <div id="menu7" class="tab-pane fade">
-            <h3>Folletes</h3>
+            <h3>1-pagers</h3>
             <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/1pagers/field_papers.docx">Field papers</a></p>
-            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/1pagers/geonode_1pager.docx">Geonode follete</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/1pagers/geonode_1pager.docx">Geonode 1-pager</a></p>
             <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/1pagers/huawei_g6_ascend_for_geospatial_apps.docx">configuración de Huawei smartphone</a></p>
             <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/1pagers/joins_and_relates.docx">Joins and Relates</a></p>
-            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/1pagers/survey123.docx">Survey123 follete</a></p>
+            <p><a target="_blank" href="{{site.baseurl}}/workshop-materials/1pagers/survey123.docx">Survey123 1-pager</a></p>
           </div>
         </div>
       </div> <!--end of materials section-->

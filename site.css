@@ -1595,6 +1595,11 @@ display:inline;
   text-align: center
 }
 
+#cusco-fieldmapping {
+  margin: 15px;
+  text-align: center
+}
+
 /*inline-block keeps bottom div from floating up: http://stackoverflow.com/questions/7759837/put-divs-below-floatleft-divs*/
 .top_panel {
   margin-bottom: 20px;

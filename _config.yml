@@ -28,4 +28,7 @@ t:
     about_link:  "sobre"
     lang: es
 
-
+# Analytics
+ga:
+  enabled: true
+  code: "UA-24614711-4"

@@ -2,6 +2,10 @@
 <html>
 <head>
   {% include dochead.html %}
+  <!-- Google Analytics -->
+  {% if site.ga.enabled == true %}
+    {% include analytics_ga_snippet.html %}
+  {% endif %}
 </head>
 <body id="mainbody">
 
